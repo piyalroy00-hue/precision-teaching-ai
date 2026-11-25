@@ -1,4 +1,7 @@
-"""Flask application entry point for the Precision Teaching AI project."""
+"""Flask application entry point for the Precision Teaching AI project.
+
+Deployment: 2026-11-25 15:50 - Role-based navbar update
+"""
 from __future__ import annotations
 
 from flask import Flask
