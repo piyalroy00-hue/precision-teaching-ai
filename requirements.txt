@@ -1,0 +1,11 @@
+Flask>=3.0
+sqlalchemy>=2.0
+pandas>=2.0
+numpy>=1.26
+scikit-learn>=1.4
+matplotlib>=3.8
+plotly>=5.20
+pytest>=8.0
+Faker>=24.0
+openai>=1.0
+gunicorn>=21.0

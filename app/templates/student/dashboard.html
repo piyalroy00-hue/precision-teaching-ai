@@ -1,0 +1,77 @@
+{% extends 'base.html' %} {% block title %}Dashboard{% endblock %} {% block
+content %}
+<div class="card">
+    <div class="nav">
+        <a href="/dashboard">Dashboard</a> |
+        <a href="/assessment">Assessment</a> |
+        <a href="/learning-plan">Learning Plan</a> |
+        <a href="/progress">Progress</a> | <a href="/tutor">AI Tutor</a> |
+        <a href="/logout">Log out</a>
+    </div>
+
+    <h1>Student Knowledge Profile</h1>
+    <p class="meta"><strong>{{ user_name }}</strong> · {{ student_code }}</p>
+    <div class="panel">
+        <h3>Your next step</h3>
+        <p>
+            Use your current knowledge profile to continue with a focused
+            learning recommendation.
+        </p>
+        <a href="/learning-plan"
+            ><button type="button">View Learning Plan</button></a
+        >
+    </div>
+
+    <h2>Overall Performance</h2>
+    <div class="metrics">
+        <div class="metric">
+            <div class="metric-label">Questions Attempted</div>
+            <div class="metric-value">{{ total_attempted }}</div>
+        </div>
+        <div class="metric">
+            <div class="metric-label">Accuracy</div>
+            <div class="metric-value">{{ '%.1f'|format(accuracy) }}%</div>
+        </div>
+        <div class="metric">
+            <div class="metric-label">Total Score</div>
+            <div class="metric-value">{{ '%.1f'|format(total_score) }}</div>
+        </div>
+    </div>
+
+    <h2>Learning Status</h2>
+    <div class="panel">
+        <p>
+            <strong>Strong</strong><br />{{ concepts['strong']|join(', ') if
+            concepts['strong'] else 'No concepts yet' }}
+        </p>
+        <p>
+            <strong>Developing</strong><br />{{ concepts['developing']|join(',
+            ') if concepts['developing'] else 'No concepts yet' }}
+        </p>
+        <p>
+            <strong>Needs attention</strong><br />{{ concepts['weak']|join(', ')
+            if concepts['weak'] else 'No concepts yet' }}
+        </p>
+    </div>
+
+    <h2>Topic Mastery</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Topic</th>
+                <th>Probability</th>
+                <th>Level</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in mastery_report %}
+            <tr>
+                <td>{{ item.topic }}</td>
+                <td>{{ '%.0f'|format(item.mastery_probability * 100) }}%</td>
+                <td><span class="badge">{{ item.mastery_level }}</span></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

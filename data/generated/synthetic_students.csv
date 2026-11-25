@@ -1,0 +1,29 @@
+student_id,student_code,name,email,learning_profile,base_ability,variance,specialty_topic,data_source
+1,SYN0001,Allison Hill,syn.student0001@example-synthetic.test,strong,0.88,0.05,,synthetic
+2,SYN0002,Noah Rhodes,syn.student0002@example-synthetic.test,strong,0.88,0.05,,synthetic
+3,SYN0003,Angie Henderson,syn.student0003@example-synthetic.test,strong,0.88,0.05,,synthetic
+4,SYN0004,Daniel Wagner,syn.student0004@example-synthetic.test,strong,0.88,0.05,,synthetic
+5,SYN0005,Cristian Santos,syn.student0005@example-synthetic.test,average,0.62,0.12,,synthetic
+6,SYN0006,Connie Lawrence,syn.student0006@example-synthetic.test,average,0.62,0.12,,synthetic
+7,SYN0007,Abigail Shaffer,syn.student0007@example-synthetic.test,average,0.62,0.12,,synthetic
+8,SYN0008,Gina Moore,syn.student0008@example-synthetic.test,average,0.62,0.12,,synthetic
+9,SYN0009,Gabrielle Davis,syn.student0009@example-synthetic.test,slow,0.45,0.1,,synthetic
+10,SYN0010,Ryan Munoz,syn.student0010@example-synthetic.test,slow,0.45,0.1,,synthetic
+11,SYN0011,Monica Herrera,syn.student0011@example-synthetic.test,slow,0.45,0.1,,synthetic
+12,SYN0012,Jamie Arnold,syn.student0012@example-synthetic.test,slow,0.45,0.1,,synthetic
+13,SYN0013,Lisa Hensley,syn.student0013@example-synthetic.test,weak,0.28,0.1,,synthetic
+14,SYN0014,Michele Williams,syn.student0014@example-synthetic.test,weak,0.28,0.1,,synthetic
+15,SYN0015,Dylan Miller,syn.student0015@example-synthetic.test,weak,0.28,0.1,,synthetic
+16,SYN0016,Brian Ramirez,syn.student0016@example-synthetic.test,weak,0.28,0.1,,synthetic
+17,SYN0017,Holly Wood,syn.student0017@example-synthetic.test,topic_specific,0.55,0.12,Parameters and Arguments,synthetic
+18,SYN0018,Derek Zuniga,syn.student0018@example-synthetic.test,topic_specific,0.55,0.12,Lists,synthetic
+19,SYN0019,Lisa Jackson,syn.student0019@example-synthetic.test,topic_specific,0.55,0.12,Exception Handling,synthetic
+20,SYN0020,Carla Gray,syn.student0020@example-synthetic.test,topic_specific,0.55,0.12,Variables and Data Types,synthetic
+21,SYN0021,Margaret Hawkins DDS,syn.student0021@example-synthetic.test,improving,0.35,0.1,,synthetic
+22,SYN0022,Patty Perez,syn.student0022@example-synthetic.test,improving,0.35,0.1,,synthetic
+23,SYN0023,Ethan Adams,syn.student0023@example-synthetic.test,improving,0.35,0.1,,synthetic
+24,SYN0024,Tommy Walter,syn.student0024@example-synthetic.test,improving,0.35,0.1,,synthetic
+25,SYN0025,Matthew Foster,syn.student0025@example-synthetic.test,inconsistent,0.55,0.3,,synthetic
+26,SYN0026,Judy Baker,syn.student0026@example-synthetic.test,inconsistent,0.55,0.3,,synthetic
+27,SYN0027,Justin Baker,syn.student0027@example-synthetic.test,inconsistent,0.55,0.3,,synthetic
+28,SYN0028,Stephanie Ross,syn.student0028@example-synthetic.test,inconsistent,0.55,0.3,,synthetic

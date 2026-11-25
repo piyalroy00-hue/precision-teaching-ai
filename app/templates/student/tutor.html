@@ -1,0 +1,49 @@
+{% extends 'base.html' %} {% block title %}AI Tutor{% endblock %} {% block
+content %}
+<div class="card">
+    <div class="nav">
+        <a href="/dashboard">Dashboard</a> |
+        <a href="/learning-plan">Learning Plan</a> |
+        <a href="/progress">Progress</a>
+    </div>
+    <span class="badge">Context-aware support</span>
+    <h1>AI Tutor: {{ tutor.topic }}</h1>
+    <p class="meta">
+        Guidance is tailored to your current learning target and selected
+        difficulty.
+    </p>
+    <h2>Explanation</h2>
+    <div class="panel"><p>{{ tutor.instruction.explanation }}</p></div>
+    <h2>Example</h2>
+    <pre>{{ tutor.instruction.example }}</pre>
+    <h2>Guided Steps</h2>
+    <p style="white-space: pre-line">{{ tutor.instruction.step_by_step }}</p>
+    <div class="panel">
+        <strong>Hint</strong>
+        <p>{{ tutor.instruction.hint }}</p>
+    </div>
+    <h2>Practice</h2>
+    <div class="panel">
+        <p>{{ tutor.practice.question }}</p>
+        <p><strong>Answer:</strong> {{ tutor.practice.correct_answer }}</p>
+        <p class="meta">{{ tutor.practice.explanation }}</p>
+    </div>
+    <h2>Ask the Tutor</h2>
+    <div class="panel">
+        {% for message in messages %}
+        <p>
+            <span class="badge">{{ message.role|title }}</span> {{
+            message.message }}
+        </p>
+        {% endfor %}
+        <form method="post">
+            <input
+                name="question"
+                aria-label="Tutor question"
+                placeholder="Ask about this topic..."
+                required
+            /><button type="submit">Ask</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

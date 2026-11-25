@@ -1,0 +1,901 @@
+student_code,topic,attempt,is_correct,difficulty,data_source
+SYN001,Variables and Data Types,1,False,Easy,synthetic
+SYN001,Variables and Data Types,2,True,Medium,synthetic
+SYN001,Variables and Data Types,3,True,Hard,synthetic
+SYN001,Variables and Data Types,4,True,Hard,synthetic
+SYN001,Variables and Data Types,5,False,Medium,synthetic
+SYN001,Variables and Data Types,6,True,Hard,synthetic
+SYN001,Operators,1,False,Easy,synthetic
+SYN001,Operators,2,True,Medium,synthetic
+SYN001,Operators,3,True,Hard,synthetic
+SYN001,Operators,4,True,Hard,synthetic
+SYN001,Operators,5,True,Hard,synthetic
+SYN001,Operators,6,True,Hard,synthetic
+SYN001,Conditional Statements,1,True,Medium,synthetic
+SYN001,Conditional Statements,2,True,Hard,synthetic
+SYN001,Conditional Statements,3,False,Medium,synthetic
+SYN001,Conditional Statements,4,True,Hard,synthetic
+SYN001,Conditional Statements,5,True,Hard,synthetic
+SYN001,Conditional Statements,6,True,Hard,synthetic
+SYN001,for Loop,1,False,Easy,synthetic
+SYN001,for Loop,2,True,Medium,synthetic
+SYN001,for Loop,3,False,Easy,synthetic
+SYN001,for Loop,4,False,Easy,synthetic
+SYN001,for Loop,5,True,Medium,synthetic
+SYN001,for Loop,6,True,Hard,synthetic
+SYN001,while Loop,1,False,Easy,synthetic
+SYN001,while Loop,2,True,Medium,synthetic
+SYN001,while Loop,3,True,Hard,synthetic
+SYN001,while Loop,4,True,Hard,synthetic
+SYN001,while Loop,5,False,Medium,synthetic
+SYN001,while Loop,6,True,Hard,synthetic
+SYN001,Function Definition,1,False,Easy,synthetic
+SYN001,Function Definition,2,False,Easy,synthetic
+SYN001,Function Definition,3,True,Medium,synthetic
+SYN001,Function Definition,4,False,Easy,synthetic
+SYN001,Function Definition,5,True,Medium,synthetic
+SYN001,Function Definition,6,True,Hard,synthetic
+SYN001,Parameters and Arguments,1,False,Easy,synthetic
+SYN001,Parameters and Arguments,2,False,Easy,synthetic
+SYN001,Parameters and Arguments,3,False,Easy,synthetic
+SYN001,Parameters and Arguments,4,True,Medium,synthetic
+SYN001,Parameters and Arguments,5,True,Hard,synthetic
+SYN001,Parameters and Arguments,6,True,Hard,synthetic
+SYN001,Return Values,1,True,Medium,synthetic
+SYN001,Return Values,2,True,Hard,synthetic
+SYN001,Return Values,3,True,Hard,synthetic
+SYN001,Return Values,4,True,Hard,synthetic
+SYN001,Return Values,5,True,Hard,synthetic
+SYN001,Return Values,6,True,Hard,synthetic
+SYN001,Variable Scope,1,False,Easy,synthetic
+SYN001,Variable Scope,2,True,Medium,synthetic
+SYN001,Variable Scope,3,True,Hard,synthetic
+SYN001,Variable Scope,4,True,Hard,synthetic
+SYN001,Variable Scope,5,True,Hard,synthetic
+SYN001,Variable Scope,6,False,Medium,synthetic
+SYN001,Lists,1,False,Easy,synthetic
+SYN001,Lists,2,False,Easy,synthetic
+SYN001,Lists,3,True,Medium,synthetic
+SYN001,Lists,4,False,Easy,synthetic
+SYN001,Lists,5,True,Medium,synthetic
+SYN001,Lists,6,True,Hard,synthetic
+SYN001,Tuples,1,False,Easy,synthetic
+SYN001,Tuples,2,False,Easy,synthetic
+SYN001,Tuples,3,False,Easy,synthetic
+SYN001,Tuples,4,False,Easy,synthetic
+SYN001,Tuples,5,False,Easy,synthetic
+SYN001,Tuples,6,True,Medium,synthetic
+SYN001,Dictionaries,1,True,Medium,synthetic
+SYN001,Dictionaries,2,True,Hard,synthetic
+SYN001,Dictionaries,3,True,Hard,synthetic
+SYN001,Dictionaries,4,True,Hard,synthetic
+SYN001,Dictionaries,5,True,Hard,synthetic
+SYN001,Dictionaries,6,False,Medium,synthetic
+SYN001,Exception Handling,1,False,Easy,synthetic
+SYN001,Exception Handling,2,True,Medium,synthetic
+SYN001,Exception Handling,3,False,Easy,synthetic
+SYN001,Exception Handling,4,True,Medium,synthetic
+SYN001,Exception Handling,5,False,Easy,synthetic
+SYN001,Exception Handling,6,True,Medium,synthetic
+SYN001,File Handling,1,True,Medium,synthetic
+SYN001,File Handling,2,True,Hard,synthetic
+SYN001,File Handling,3,False,Medium,synthetic
+SYN001,File Handling,4,True,Hard,synthetic
+SYN001,File Handling,5,True,Hard,synthetic
+SYN001,File Handling,6,False,Medium,synthetic
+SYN001,Recursion,1,False,Easy,synthetic
+SYN001,Recursion,2,True,Medium,synthetic
+SYN001,Recursion,3,False,Easy,synthetic
+SYN001,Recursion,4,True,Medium,synthetic
+SYN001,Recursion,5,True,Hard,synthetic
+SYN001,Recursion,6,True,Hard,synthetic
+SYN002,Variables and Data Types,1,True,Medium,synthetic
+SYN002,Variables and Data Types,2,False,Easy,synthetic
+SYN002,Variables and Data Types,3,False,Easy,synthetic
+SYN002,Variables and Data Types,4,True,Medium,synthetic
+SYN002,Variables and Data Types,5,True,Hard,synthetic
+SYN002,Variables and Data Types,6,True,Hard,synthetic
+SYN002,Operators,1,False,Easy,synthetic
+SYN002,Operators,2,False,Easy,synthetic
+SYN002,Operators,3,False,Easy,synthetic
+SYN002,Operators,4,False,Easy,synthetic
+SYN002,Operators,5,True,Medium,synthetic
+SYN002,Operators,6,True,Hard,synthetic
+SYN002,Conditional Statements,1,False,Easy,synthetic
+SYN002,Conditional Statements,2,False,Easy,synthetic
+SYN002,Conditional Statements,3,True,Medium,synthetic
+SYN002,Conditional Statements,4,False,Easy,synthetic
+SYN002,Conditional Statements,5,True,Medium,synthetic
+SYN002,Conditional Statements,6,True,Hard,synthetic
+SYN002,for Loop,1,False,Easy,synthetic
+SYN002,for Loop,2,False,Easy,synthetic
+SYN002,for Loop,3,False,Easy,synthetic
+SYN002,for Loop,4,True,Medium,synthetic
+SYN002,for Loop,5,True,Hard,synthetic
+SYN002,for Loop,6,True,Hard,synthetic
+SYN002,while Loop,1,False,Easy,synthetic
+SYN002,while Loop,2,False,Easy,synthetic
+SYN002,while Loop,3,True,Medium,synthetic
+SYN002,while Loop,4,True,Hard,synthetic
+SYN002,while Loop,5,True,Hard,synthetic
+SYN002,while Loop,6,True,Hard,synthetic
+SYN002,Function Definition,1,False,Easy,synthetic
+SYN002,Function Definition,2,False,Easy,synthetic
+SYN002,Function Definition,3,False,Easy,synthetic
+SYN002,Function Definition,4,True,Medium,synthetic
+SYN002,Function Definition,5,True,Hard,synthetic
+SYN002,Function Definition,6,True,Hard,synthetic
+SYN002,Parameters and Arguments,1,True,Medium,synthetic
+SYN002,Parameters and Arguments,2,False,Easy,synthetic
+SYN002,Parameters and Arguments,3,False,Easy,synthetic
+SYN002,Parameters and Arguments,4,False,Easy,synthetic
+SYN002,Parameters and Arguments,5,True,Medium,synthetic
+SYN002,Parameters and Arguments,6,True,Hard,synthetic
+SYN002,Return Values,1,False,Easy,synthetic
+SYN002,Return Values,2,False,Easy,synthetic
+SYN002,Return Values,3,True,Medium,synthetic
+SYN002,Return Values,4,True,Hard,synthetic
+SYN002,Return Values,5,True,Hard,synthetic
+SYN002,Return Values,6,True,Hard,synthetic
+SYN002,Variable Scope,1,False,Easy,synthetic
+SYN002,Variable Scope,2,True,Medium,synthetic
+SYN002,Variable Scope,3,True,Hard,synthetic
+SYN002,Variable Scope,4,True,Hard,synthetic
+SYN002,Variable Scope,5,True,Hard,synthetic
+SYN002,Variable Scope,6,False,Medium,synthetic
+SYN002,Lists,1,False,Easy,synthetic
+SYN002,Lists,2,True,Medium,synthetic
+SYN002,Lists,3,True,Hard,synthetic
+SYN002,Lists,4,False,Medium,synthetic
+SYN002,Lists,5,True,Hard,synthetic
+SYN002,Lists,6,True,Hard,synthetic
+SYN002,Tuples,1,False,Easy,synthetic
+SYN002,Tuples,2,False,Easy,synthetic
+SYN002,Tuples,3,True,Medium,synthetic
+SYN002,Tuples,4,True,Hard,synthetic
+SYN002,Tuples,5,True,Hard,synthetic
+SYN002,Tuples,6,True,Hard,synthetic
+SYN002,Dictionaries,1,True,Medium,synthetic
+SYN002,Dictionaries,2,False,Easy,synthetic
+SYN002,Dictionaries,3,True,Medium,synthetic
+SYN002,Dictionaries,4,True,Hard,synthetic
+SYN002,Dictionaries,5,True,Hard,synthetic
+SYN002,Dictionaries,6,True,Hard,synthetic
+SYN002,Exception Handling,1,True,Medium,synthetic
+SYN002,Exception Handling,2,False,Easy,synthetic
+SYN002,Exception Handling,3,False,Easy,synthetic
+SYN002,Exception Handling,4,True,Medium,synthetic
+SYN002,Exception Handling,5,True,Hard,synthetic
+SYN002,Exception Handling,6,True,Hard,synthetic
+SYN002,File Handling,1,True,Medium,synthetic
+SYN002,File Handling,2,True,Hard,synthetic
+SYN002,File Handling,3,False,Medium,synthetic
+SYN002,File Handling,4,True,Hard,synthetic
+SYN002,File Handling,5,True,Hard,synthetic
+SYN002,File Handling,6,True,Hard,synthetic
+SYN002,Recursion,1,False,Easy,synthetic
+SYN002,Recursion,2,True,Medium,synthetic
+SYN002,Recursion,3,True,Hard,synthetic
+SYN002,Recursion,4,True,Hard,synthetic
+SYN002,Recursion,5,True,Hard,synthetic
+SYN002,Recursion,6,True,Hard,synthetic
+SYN003,Variables and Data Types,1,False,Easy,synthetic
+SYN003,Variables and Data Types,2,False,Easy,synthetic
+SYN003,Variables and Data Types,3,False,Easy,synthetic
+SYN003,Variables and Data Types,4,True,Medium,synthetic
+SYN003,Variables and Data Types,5,True,Hard,synthetic
+SYN003,Variables and Data Types,6,True,Hard,synthetic
+SYN003,Operators,1,False,Easy,synthetic
+SYN003,Operators,2,True,Medium,synthetic
+SYN003,Operators,3,True,Hard,synthetic
+SYN003,Operators,4,True,Hard,synthetic
+SYN003,Operators,5,True,Hard,synthetic
+SYN003,Operators,6,True,Hard,synthetic
+SYN003,Conditional Statements,1,True,Medium,synthetic
+SYN003,Conditional Statements,2,False,Easy,synthetic
+SYN003,Conditional Statements,3,True,Medium,synthetic
+SYN003,Conditional Statements,4,False,Easy,synthetic
+SYN003,Conditional Statements,5,True,Medium,synthetic
+SYN003,Conditional Statements,6,True,Hard,synthetic
+SYN003,for Loop,1,False,Easy,synthetic
+SYN003,for Loop,2,False,Easy,synthetic
+SYN003,for Loop,3,False,Easy,synthetic
+SYN003,for Loop,4,False,Easy,synthetic
+SYN003,for Loop,5,False,Easy,synthetic
+SYN003,for Loop,6,True,Medium,synthetic
+SYN003,while Loop,1,False,Easy,synthetic
+SYN003,while Loop,2,True,Medium,synthetic
+SYN003,while Loop,3,True,Hard,synthetic
+SYN003,while Loop,4,True,Hard,synthetic
+SYN003,while Loop,5,True,Hard,synthetic
+SYN003,while Loop,6,False,Medium,synthetic
+SYN003,Function Definition,1,True,Medium,synthetic
+SYN003,Function Definition,2,False,Easy,synthetic
+SYN003,Function Definition,3,True,Medium,synthetic
+SYN003,Function Definition,4,True,Hard,synthetic
+SYN003,Function Definition,5,False,Medium,synthetic
+SYN003,Function Definition,6,False,Easy,synthetic
+SYN003,Parameters and Arguments,1,False,Easy,synthetic
+SYN003,Parameters and Arguments,2,False,Easy,synthetic
+SYN003,Parameters and Arguments,3,True,Medium,synthetic
+SYN003,Parameters and Arguments,4,True,Hard,synthetic
+SYN003,Parameters and Arguments,5,False,Medium,synthetic
+SYN003,Parameters and Arguments,6,True,Hard,synthetic
+SYN003,Return Values,1,False,Easy,synthetic
+SYN003,Return Values,2,False,Easy,synthetic
+SYN003,Return Values,3,True,Medium,synthetic
+SYN003,Return Values,4,True,Hard,synthetic
+SYN003,Return Values,5,True,Hard,synthetic
+SYN003,Return Values,6,False,Medium,synthetic
+SYN003,Variable Scope,1,True,Medium,synthetic
+SYN003,Variable Scope,2,False,Easy,synthetic
+SYN003,Variable Scope,3,True,Medium,synthetic
+SYN003,Variable Scope,4,True,Hard,synthetic
+SYN003,Variable Scope,5,True,Hard,synthetic
+SYN003,Variable Scope,6,True,Hard,synthetic
+SYN003,Lists,1,True,Medium,synthetic
+SYN003,Lists,2,True,Hard,synthetic
+SYN003,Lists,3,False,Medium,synthetic
+SYN003,Lists,4,True,Hard,synthetic
+SYN003,Lists,5,True,Hard,synthetic
+SYN003,Lists,6,True,Hard,synthetic
+SYN003,Tuples,1,False,Easy,synthetic
+SYN003,Tuples,2,False,Easy,synthetic
+SYN003,Tuples,3,True,Medium,synthetic
+SYN003,Tuples,4,False,Easy,synthetic
+SYN003,Tuples,5,True,Medium,synthetic
+SYN003,Tuples,6,True,Hard,synthetic
+SYN003,Dictionaries,1,True,Medium,synthetic
+SYN003,Dictionaries,2,True,Hard,synthetic
+SYN003,Dictionaries,3,False,Medium,synthetic
+SYN003,Dictionaries,4,True,Hard,synthetic
+SYN003,Dictionaries,5,True,Hard,synthetic
+SYN003,Dictionaries,6,True,Hard,synthetic
+SYN003,Exception Handling,1,True,Medium,synthetic
+SYN003,Exception Handling,2,True,Hard,synthetic
+SYN003,Exception Handling,3,False,Medium,synthetic
+SYN003,Exception Handling,4,False,Easy,synthetic
+SYN003,Exception Handling,5,True,Medium,synthetic
+SYN003,Exception Handling,6,True,Hard,synthetic
+SYN003,File Handling,1,True,Medium,synthetic
+SYN003,File Handling,2,False,Easy,synthetic
+SYN003,File Handling,3,False,Easy,synthetic
+SYN003,File Handling,4,False,Easy,synthetic
+SYN003,File Handling,5,True,Medium,synthetic
+SYN003,File Handling,6,True,Hard,synthetic
+SYN003,Recursion,1,False,Easy,synthetic
+SYN003,Recursion,2,False,Easy,synthetic
+SYN003,Recursion,3,False,Easy,synthetic
+SYN003,Recursion,4,False,Easy,synthetic
+SYN003,Recursion,5,True,Medium,synthetic
+SYN003,Recursion,6,True,Hard,synthetic
+SYN004,Variables and Data Types,1,False,Easy,synthetic
+SYN004,Variables and Data Types,2,True,Medium,synthetic
+SYN004,Variables and Data Types,3,False,Easy,synthetic
+SYN004,Variables and Data Types,4,False,Easy,synthetic
+SYN004,Variables and Data Types,5,True,Medium,synthetic
+SYN004,Variables and Data Types,6,True,Hard,synthetic
+SYN004,Operators,1,True,Medium,synthetic
+SYN004,Operators,2,False,Easy,synthetic
+SYN004,Operators,3,True,Medium,synthetic
+SYN004,Operators,4,True,Hard,synthetic
+SYN004,Operators,5,True,Hard,synthetic
+SYN004,Operators,6,True,Hard,synthetic
+SYN004,Conditional Statements,1,False,Easy,synthetic
+SYN004,Conditional Statements,2,True,Medium,synthetic
+SYN004,Conditional Statements,3,True,Hard,synthetic
+SYN004,Conditional Statements,4,False,Medium,synthetic
+SYN004,Conditional Statements,5,False,Easy,synthetic
+SYN004,Conditional Statements,6,True,Medium,synthetic
+SYN004,for Loop,1,False,Easy,synthetic
+SYN004,for Loop,2,True,Medium,synthetic
+SYN004,for Loop,3,True,Hard,synthetic
+SYN004,for Loop,4,False,Medium,synthetic
+SYN004,for Loop,5,True,Hard,synthetic
+SYN004,for Loop,6,True,Hard,synthetic
+SYN004,while Loop,1,False,Easy,synthetic
+SYN004,while Loop,2,False,Easy,synthetic
+SYN004,while Loop,3,True,Medium,synthetic
+SYN004,while Loop,4,True,Hard,synthetic
+SYN004,while Loop,5,True,Hard,synthetic
+SYN004,while Loop,6,False,Medium,synthetic
+SYN004,Function Definition,1,False,Easy,synthetic
+SYN004,Function Definition,2,False,Easy,synthetic
+SYN004,Function Definition,3,False,Easy,synthetic
+SYN004,Function Definition,4,True,Medium,synthetic
+SYN004,Function Definition,5,True,Hard,synthetic
+SYN004,Function Definition,6,True,Hard,synthetic
+SYN004,Parameters and Arguments,1,True,Medium,synthetic
+SYN004,Parameters and Arguments,2,False,Easy,synthetic
+SYN004,Parameters and Arguments,3,False,Easy,synthetic
+SYN004,Parameters and Arguments,4,False,Easy,synthetic
+SYN004,Parameters and Arguments,5,False,Easy,synthetic
+SYN004,Parameters and Arguments,6,True,Medium,synthetic
+SYN004,Return Values,1,True,Medium,synthetic
+SYN004,Return Values,2,True,Hard,synthetic
+SYN004,Return Values,3,False,Medium,synthetic
+SYN004,Return Values,4,False,Easy,synthetic
+SYN004,Return Values,5,True,Medium,synthetic
+SYN004,Return Values,6,True,Hard,synthetic
+SYN004,Variable Scope,1,True,Medium,synthetic
+SYN004,Variable Scope,2,False,Easy,synthetic
+SYN004,Variable Scope,3,False,Easy,synthetic
+SYN004,Variable Scope,4,False,Easy,synthetic
+SYN004,Variable Scope,5,False,Easy,synthetic
+SYN004,Variable Scope,6,False,Easy,synthetic
+SYN004,Lists,1,True,Medium,synthetic
+SYN004,Lists,2,False,Easy,synthetic
+SYN004,Lists,3,True,Medium,synthetic
+SYN004,Lists,4,False,Easy,synthetic
+SYN004,Lists,5,False,Easy,synthetic
+SYN004,Lists,6,False,Easy,synthetic
+SYN004,Tuples,1,False,Easy,synthetic
+SYN004,Tuples,2,True,Medium,synthetic
+SYN004,Tuples,3,False,Easy,synthetic
+SYN004,Tuples,4,True,Medium,synthetic
+SYN004,Tuples,5,False,Easy,synthetic
+SYN004,Tuples,6,False,Easy,synthetic
+SYN004,Dictionaries,1,True,Medium,synthetic
+SYN004,Dictionaries,2,False,Easy,synthetic
+SYN004,Dictionaries,3,True,Medium,synthetic
+SYN004,Dictionaries,4,True,Hard,synthetic
+SYN004,Dictionaries,5,False,Medium,synthetic
+SYN004,Dictionaries,6,True,Hard,synthetic
+SYN004,Exception Handling,1,True,Medium,synthetic
+SYN004,Exception Handling,2,True,Hard,synthetic
+SYN004,Exception Handling,3,True,Hard,synthetic
+SYN004,Exception Handling,4,False,Medium,synthetic
+SYN004,Exception Handling,5,False,Easy,synthetic
+SYN004,Exception Handling,6,True,Medium,synthetic
+SYN004,File Handling,1,False,Easy,synthetic
+SYN004,File Handling,2,True,Medium,synthetic
+SYN004,File Handling,3,False,Easy,synthetic
+SYN004,File Handling,4,True,Medium,synthetic
+SYN004,File Handling,5,False,Easy,synthetic
+SYN004,File Handling,6,True,Medium,synthetic
+SYN004,Recursion,1,False,Easy,synthetic
+SYN004,Recursion,2,True,Medium,synthetic
+SYN004,Recursion,3,False,Easy,synthetic
+SYN004,Recursion,4,True,Medium,synthetic
+SYN004,Recursion,5,True,Hard,synthetic
+SYN004,Recursion,6,True,Hard,synthetic
+SYN005,Variables and Data Types,1,False,Easy,synthetic
+SYN005,Variables and Data Types,2,True,Medium,synthetic
+SYN005,Variables and Data Types,3,False,Easy,synthetic
+SYN005,Variables and Data Types,4,True,Medium,synthetic
+SYN005,Variables and Data Types,5,True,Hard,synthetic
+SYN005,Variables and Data Types,6,True,Hard,synthetic
+SYN005,Operators,1,True,Medium,synthetic
+SYN005,Operators,2,False,Easy,synthetic
+SYN005,Operators,3,True,Medium,synthetic
+SYN005,Operators,4,False,Easy,synthetic
+SYN005,Operators,5,True,Medium,synthetic
+SYN005,Operators,6,True,Hard,synthetic
+SYN005,Conditional Statements,1,False,Easy,synthetic
+SYN005,Conditional Statements,2,False,Easy,synthetic
+SYN005,Conditional Statements,3,True,Medium,synthetic
+SYN005,Conditional Statements,4,True,Hard,synthetic
+SYN005,Conditional Statements,5,True,Hard,synthetic
+SYN005,Conditional Statements,6,True,Hard,synthetic
+SYN005,for Loop,1,True,Medium,synthetic
+SYN005,for Loop,2,False,Easy,synthetic
+SYN005,for Loop,3,False,Easy,synthetic
+SYN005,for Loop,4,True,Medium,synthetic
+SYN005,for Loop,5,True,Hard,synthetic
+SYN005,for Loop,6,True,Hard,synthetic
+SYN005,while Loop,1,True,Medium,synthetic
+SYN005,while Loop,2,True,Hard,synthetic
+SYN005,while Loop,3,True,Hard,synthetic
+SYN005,while Loop,4,True,Hard,synthetic
+SYN005,while Loop,5,False,Medium,synthetic
+SYN005,while Loop,6,True,Hard,synthetic
+SYN005,Function Definition,1,False,Easy,synthetic
+SYN005,Function Definition,2,False,Easy,synthetic
+SYN005,Function Definition,3,True,Medium,synthetic
+SYN005,Function Definition,4,True,Hard,synthetic
+SYN005,Function Definition,5,True,Hard,synthetic
+SYN005,Function Definition,6,True,Hard,synthetic
+SYN005,Parameters and Arguments,1,True,Medium,synthetic
+SYN005,Parameters and Arguments,2,False,Easy,synthetic
+SYN005,Parameters and Arguments,3,False,Easy,synthetic
+SYN005,Parameters and Arguments,4,True,Medium,synthetic
+SYN005,Parameters and Arguments,5,True,Hard,synthetic
+SYN005,Parameters and Arguments,6,True,Hard,synthetic
+SYN005,Return Values,1,False,Easy,synthetic
+SYN005,Return Values,2,False,Easy,synthetic
+SYN005,Return Values,3,False,Easy,synthetic
+SYN005,Return Values,4,True,Medium,synthetic
+SYN005,Return Values,5,True,Hard,synthetic
+SYN005,Return Values,6,True,Hard,synthetic
+SYN005,Variable Scope,1,False,Easy,synthetic
+SYN005,Variable Scope,2,True,Medium,synthetic
+SYN005,Variable Scope,3,False,Easy,synthetic
+SYN005,Variable Scope,4,False,Easy,synthetic
+SYN005,Variable Scope,5,True,Medium,synthetic
+SYN005,Variable Scope,6,True,Hard,synthetic
+SYN005,Lists,1,True,Medium,synthetic
+SYN005,Lists,2,True,Hard,synthetic
+SYN005,Lists,3,True,Hard,synthetic
+SYN005,Lists,4,True,Hard,synthetic
+SYN005,Lists,5,False,Medium,synthetic
+SYN005,Lists,6,True,Hard,synthetic
+SYN005,Tuples,1,True,Medium,synthetic
+SYN005,Tuples,2,False,Easy,synthetic
+SYN005,Tuples,3,True,Medium,synthetic
+SYN005,Tuples,4,False,Easy,synthetic
+SYN005,Tuples,5,True,Medium,synthetic
+SYN005,Tuples,6,True,Hard,synthetic
+SYN005,Dictionaries,1,False,Easy,synthetic
+SYN005,Dictionaries,2,True,Medium,synthetic
+SYN005,Dictionaries,3,False,Easy,synthetic
+SYN005,Dictionaries,4,False,Easy,synthetic
+SYN005,Dictionaries,5,True,Medium,synthetic
+SYN005,Dictionaries,6,True,Hard,synthetic
+SYN005,Exception Handling,1,True,Medium,synthetic
+SYN005,Exception Handling,2,False,Easy,synthetic
+SYN005,Exception Handling,3,True,Medium,synthetic
+SYN005,Exception Handling,4,True,Hard,synthetic
+SYN005,Exception Handling,5,True,Hard,synthetic
+SYN005,Exception Handling,6,False,Medium,synthetic
+SYN005,File Handling,1,False,Easy,synthetic
+SYN005,File Handling,2,False,Easy,synthetic
+SYN005,File Handling,3,False,Easy,synthetic
+SYN005,File Handling,4,False,Easy,synthetic
+SYN005,File Handling,5,True,Medium,synthetic
+SYN005,File Handling,6,False,Easy,synthetic
+SYN005,Recursion,1,False,Easy,synthetic
+SYN005,Recursion,2,False,Easy,synthetic
+SYN005,Recursion,3,False,Easy,synthetic
+SYN005,Recursion,4,True,Medium,synthetic
+SYN005,Recursion,5,False,Easy,synthetic
+SYN005,Recursion,6,True,Medium,synthetic
+SYN006,Variables and Data Types,1,False,Easy,synthetic
+SYN006,Variables and Data Types,2,False,Easy,synthetic
+SYN006,Variables and Data Types,3,True,Medium,synthetic
+SYN006,Variables and Data Types,4,True,Hard,synthetic
+SYN006,Variables and Data Types,5,True,Hard,synthetic
+SYN006,Variables and Data Types,6,True,Hard,synthetic
+SYN006,Operators,1,False,Easy,synthetic
+SYN006,Operators,2,False,Easy,synthetic
+SYN006,Operators,3,False,Easy,synthetic
+SYN006,Operators,4,True,Medium,synthetic
+SYN006,Operators,5,True,Hard,synthetic
+SYN006,Operators,6,True,Hard,synthetic
+SYN006,Conditional Statements,1,True,Medium,synthetic
+SYN006,Conditional Statements,2,True,Hard,synthetic
+SYN006,Conditional Statements,3,True,Hard,synthetic
+SYN006,Conditional Statements,4,True,Hard,synthetic
+SYN006,Conditional Statements,5,True,Hard,synthetic
+SYN006,Conditional Statements,6,True,Hard,synthetic
+SYN006,for Loop,1,False,Easy,synthetic
+SYN006,for Loop,2,True,Medium,synthetic
+SYN006,for Loop,3,True,Hard,synthetic
+SYN006,for Loop,4,True,Hard,synthetic
+SYN006,for Loop,5,True,Hard,synthetic
+SYN006,for Loop,6,True,Hard,synthetic
+SYN006,while Loop,1,True,Medium,synthetic
+SYN006,while Loop,2,False,Easy,synthetic
+SYN006,while Loop,3,True,Medium,synthetic
+SYN006,while Loop,4,False,Easy,synthetic
+SYN006,while Loop,5,False,Easy,synthetic
+SYN006,while Loop,6,True,Medium,synthetic
+SYN006,Function Definition,1,True,Medium,synthetic
+SYN006,Function Definition,2,True,Hard,synthetic
+SYN006,Function Definition,3,True,Hard,synthetic
+SYN006,Function Definition,4,False,Medium,synthetic
+SYN006,Function Definition,5,False,Easy,synthetic
+SYN006,Function Definition,6,False,Easy,synthetic
+SYN006,Parameters and Arguments,1,True,Medium,synthetic
+SYN006,Parameters and Arguments,2,False,Easy,synthetic
+SYN006,Parameters and Arguments,3,True,Medium,synthetic
+SYN006,Parameters and Arguments,4,True,Hard,synthetic
+SYN006,Parameters and Arguments,5,True,Hard,synthetic
+SYN006,Parameters and Arguments,6,True,Hard,synthetic
+SYN006,Return Values,1,True,Medium,synthetic
+SYN006,Return Values,2,True,Hard,synthetic
+SYN006,Return Values,3,True,Hard,synthetic
+SYN006,Return Values,4,True,Hard,synthetic
+SYN006,Return Values,5,True,Hard,synthetic
+SYN006,Return Values,6,True,Hard,synthetic
+SYN006,Variable Scope,1,False,Easy,synthetic
+SYN006,Variable Scope,2,True,Medium,synthetic
+SYN006,Variable Scope,3,False,Easy,synthetic
+SYN006,Variable Scope,4,True,Medium,synthetic
+SYN006,Variable Scope,5,True,Hard,synthetic
+SYN006,Variable Scope,6,True,Hard,synthetic
+SYN006,Lists,1,True,Medium,synthetic
+SYN006,Lists,2,False,Easy,synthetic
+SYN006,Lists,3,True,Medium,synthetic
+SYN006,Lists,4,True,Hard,synthetic
+SYN006,Lists,5,True,Hard,synthetic
+SYN006,Lists,6,True,Hard,synthetic
+SYN006,Tuples,1,True,Medium,synthetic
+SYN006,Tuples,2,True,Hard,synthetic
+SYN006,Tuples,3,False,Medium,synthetic
+SYN006,Tuples,4,True,Hard,synthetic
+SYN006,Tuples,5,True,Hard,synthetic
+SYN006,Tuples,6,True,Hard,synthetic
+SYN006,Dictionaries,1,True,Medium,synthetic
+SYN006,Dictionaries,2,True,Hard,synthetic
+SYN006,Dictionaries,3,True,Hard,synthetic
+SYN006,Dictionaries,4,True,Hard,synthetic
+SYN006,Dictionaries,5,False,Medium,synthetic
+SYN006,Dictionaries,6,True,Hard,synthetic
+SYN006,Exception Handling,1,False,Easy,synthetic
+SYN006,Exception Handling,2,False,Easy,synthetic
+SYN006,Exception Handling,3,False,Easy,synthetic
+SYN006,Exception Handling,4,False,Easy,synthetic
+SYN006,Exception Handling,5,False,Easy,synthetic
+SYN006,Exception Handling,6,True,Medium,synthetic
+SYN006,File Handling,1,True,Medium,synthetic
+SYN006,File Handling,2,True,Hard,synthetic
+SYN006,File Handling,3,True,Hard,synthetic
+SYN006,File Handling,4,True,Hard,synthetic
+SYN006,File Handling,5,True,Hard,synthetic
+SYN006,File Handling,6,True,Hard,synthetic
+SYN006,Recursion,1,False,Easy,synthetic
+SYN006,Recursion,2,False,Easy,synthetic
+SYN006,Recursion,3,True,Medium,synthetic
+SYN006,Recursion,4,True,Hard,synthetic
+SYN006,Recursion,5,True,Hard,synthetic
+SYN006,Recursion,6,True,Hard,synthetic
+SYN007,Variables and Data Types,1,False,Easy,synthetic
+SYN007,Variables and Data Types,2,False,Easy,synthetic
+SYN007,Variables and Data Types,3,True,Medium,synthetic
+SYN007,Variables and Data Types,4,True,Hard,synthetic
+SYN007,Variables and Data Types,5,True,Hard,synthetic
+SYN007,Variables and Data Types,6,True,Hard,synthetic
+SYN007,Operators,1,False,Easy,synthetic
+SYN007,Operators,2,True,Medium,synthetic
+SYN007,Operators,3,False,Easy,synthetic
+SYN007,Operators,4,True,Medium,synthetic
+SYN007,Operators,5,True,Hard,synthetic
+SYN007,Operators,6,True,Hard,synthetic
+SYN007,Conditional Statements,1,True,Medium,synthetic
+SYN007,Conditional Statements,2,False,Easy,synthetic
+SYN007,Conditional Statements,3,False,Easy,synthetic
+SYN007,Conditional Statements,4,True,Medium,synthetic
+SYN007,Conditional Statements,5,True,Hard,synthetic
+SYN007,Conditional Statements,6,False,Medium,synthetic
+SYN007,for Loop,1,False,Easy,synthetic
+SYN007,for Loop,2,True,Medium,synthetic
+SYN007,for Loop,3,True,Hard,synthetic
+SYN007,for Loop,4,True,Hard,synthetic
+SYN007,for Loop,5,True,Hard,synthetic
+SYN007,for Loop,6,True,Hard,synthetic
+SYN007,while Loop,1,False,Easy,synthetic
+SYN007,while Loop,2,False,Easy,synthetic
+SYN007,while Loop,3,True,Medium,synthetic
+SYN007,while Loop,4,False,Easy,synthetic
+SYN007,while Loop,5,True,Medium,synthetic
+SYN007,while Loop,6,True,Hard,synthetic
+SYN007,Function Definition,1,False,Easy,synthetic
+SYN007,Function Definition,2,True,Medium,synthetic
+SYN007,Function Definition,3,False,Easy,synthetic
+SYN007,Function Definition,4,False,Easy,synthetic
+SYN007,Function Definition,5,True,Medium,synthetic
+SYN007,Function Definition,6,True,Hard,synthetic
+SYN007,Parameters and Arguments,1,False,Easy,synthetic
+SYN007,Parameters and Arguments,2,True,Medium,synthetic
+SYN007,Parameters and Arguments,3,True,Hard,synthetic
+SYN007,Parameters and Arguments,4,False,Medium,synthetic
+SYN007,Parameters and Arguments,5,True,Hard,synthetic
+SYN007,Parameters and Arguments,6,False,Medium,synthetic
+SYN007,Return Values,1,False,Easy,synthetic
+SYN007,Return Values,2,True,Medium,synthetic
+SYN007,Return Values,3,False,Easy,synthetic
+SYN007,Return Values,4,True,Medium,synthetic
+SYN007,Return Values,5,True,Hard,synthetic
+SYN007,Return Values,6,True,Hard,synthetic
+SYN007,Variable Scope,1,True,Medium,synthetic
+SYN007,Variable Scope,2,True,Hard,synthetic
+SYN007,Variable Scope,3,False,Medium,synthetic
+SYN007,Variable Scope,4,True,Hard,synthetic
+SYN007,Variable Scope,5,True,Hard,synthetic
+SYN007,Variable Scope,6,True,Hard,synthetic
+SYN007,Lists,1,True,Medium,synthetic
+SYN007,Lists,2,False,Easy,synthetic
+SYN007,Lists,3,False,Easy,synthetic
+SYN007,Lists,4,True,Medium,synthetic
+SYN007,Lists,5,True,Hard,synthetic
+SYN007,Lists,6,False,Medium,synthetic
+SYN007,Tuples,1,True,Medium,synthetic
+SYN007,Tuples,2,False,Easy,synthetic
+SYN007,Tuples,3,True,Medium,synthetic
+SYN007,Tuples,4,False,Easy,synthetic
+SYN007,Tuples,5,True,Medium,synthetic
+SYN007,Tuples,6,True,Hard,synthetic
+SYN007,Dictionaries,1,False,Easy,synthetic
+SYN007,Dictionaries,2,False,Easy,synthetic
+SYN007,Dictionaries,3,True,Medium,synthetic
+SYN007,Dictionaries,4,True,Hard,synthetic
+SYN007,Dictionaries,5,True,Hard,synthetic
+SYN007,Dictionaries,6,True,Hard,synthetic
+SYN007,Exception Handling,1,False,Easy,synthetic
+SYN007,Exception Handling,2,True,Medium,synthetic
+SYN007,Exception Handling,3,True,Hard,synthetic
+SYN007,Exception Handling,4,True,Hard,synthetic
+SYN007,Exception Handling,5,True,Hard,synthetic
+SYN007,Exception Handling,6,True,Hard,synthetic
+SYN007,File Handling,1,False,Easy,synthetic
+SYN007,File Handling,2,True,Medium,synthetic
+SYN007,File Handling,3,True,Hard,synthetic
+SYN007,File Handling,4,True,Hard,synthetic
+SYN007,File Handling,5,True,Hard,synthetic
+SYN007,File Handling,6,True,Hard,synthetic
+SYN007,Recursion,1,False,Easy,synthetic
+SYN007,Recursion,2,False,Easy,synthetic
+SYN007,Recursion,3,True,Medium,synthetic
+SYN007,Recursion,4,True,Hard,synthetic
+SYN007,Recursion,5,True,Hard,synthetic
+SYN007,Recursion,6,True,Hard,synthetic
+SYN008,Variables and Data Types,1,False,Easy,synthetic
+SYN008,Variables and Data Types,2,True,Medium,synthetic
+SYN008,Variables and Data Types,3,True,Hard,synthetic
+SYN008,Variables and Data Types,4,True,Hard,synthetic
+SYN008,Variables and Data Types,5,True,Hard,synthetic
+SYN008,Variables and Data Types,6,True,Hard,synthetic
+SYN008,Operators,1,True,Medium,synthetic
+SYN008,Operators,2,True,Hard,synthetic
+SYN008,Operators,3,True,Hard,synthetic
+SYN008,Operators,4,True,Hard,synthetic
+SYN008,Operators,5,False,Medium,synthetic
+SYN008,Operators,6,True,Hard,synthetic
+SYN008,Conditional Statements,1,False,Easy,synthetic
+SYN008,Conditional Statements,2,True,Medium,synthetic
+SYN008,Conditional Statements,3,False,Easy,synthetic
+SYN008,Conditional Statements,4,True,Medium,synthetic
+SYN008,Conditional Statements,5,False,Easy,synthetic
+SYN008,Conditional Statements,6,True,Medium,synthetic
+SYN008,for Loop,1,False,Easy,synthetic
+SYN008,for Loop,2,True,Medium,synthetic
+SYN008,for Loop,3,True,Hard,synthetic
+SYN008,for Loop,4,True,Hard,synthetic
+SYN008,for Loop,5,False,Medium,synthetic
+SYN008,for Loop,6,True,Hard,synthetic
+SYN008,while Loop,1,False,Easy,synthetic
+SYN008,while Loop,2,True,Medium,synthetic
+SYN008,while Loop,3,True,Hard,synthetic
+SYN008,while Loop,4,True,Hard,synthetic
+SYN008,while Loop,5,True,Hard,synthetic
+SYN008,while Loop,6,True,Hard,synthetic
+SYN008,Function Definition,1,False,Easy,synthetic
+SYN008,Function Definition,2,True,Medium,synthetic
+SYN008,Function Definition,3,False,Easy,synthetic
+SYN008,Function Definition,4,True,Medium,synthetic
+SYN008,Function Definition,5,True,Hard,synthetic
+SYN008,Function Definition,6,True,Hard,synthetic
+SYN008,Parameters and Arguments,1,False,Easy,synthetic
+SYN008,Parameters and Arguments,2,True,Medium,synthetic
+SYN008,Parameters and Arguments,3,True,Hard,synthetic
+SYN008,Parameters and Arguments,4,True,Hard,synthetic
+SYN008,Parameters and Arguments,5,True,Hard,synthetic
+SYN008,Parameters and Arguments,6,False,Medium,synthetic
+SYN008,Return Values,1,False,Easy,synthetic
+SYN008,Return Values,2,True,Medium,synthetic
+SYN008,Return Values,3,False,Easy,synthetic
+SYN008,Return Values,4,True,Medium,synthetic
+SYN008,Return Values,5,True,Hard,synthetic
+SYN008,Return Values,6,False,Medium,synthetic
+SYN008,Variable Scope,1,True,Medium,synthetic
+SYN008,Variable Scope,2,True,Hard,synthetic
+SYN008,Variable Scope,3,False,Medium,synthetic
+SYN008,Variable Scope,4,True,Hard,synthetic
+SYN008,Variable Scope,5,True,Hard,synthetic
+SYN008,Variable Scope,6,True,Hard,synthetic
+SYN008,Lists,1,True,Medium,synthetic
+SYN008,Lists,2,True,Hard,synthetic
+SYN008,Lists,3,True,Hard,synthetic
+SYN008,Lists,4,True,Hard,synthetic
+SYN008,Lists,5,True,Hard,synthetic
+SYN008,Lists,6,True,Hard,synthetic
+SYN008,Tuples,1,False,Easy,synthetic
+SYN008,Tuples,2,True,Medium,synthetic
+SYN008,Tuples,3,False,Easy,synthetic
+SYN008,Tuples,4,False,Easy,synthetic
+SYN008,Tuples,5,False,Easy,synthetic
+SYN008,Tuples,6,True,Medium,synthetic
+SYN008,Dictionaries,1,False,Easy,synthetic
+SYN008,Dictionaries,2,False,Easy,synthetic
+SYN008,Dictionaries,3,True,Medium,synthetic
+SYN008,Dictionaries,4,True,Hard,synthetic
+SYN008,Dictionaries,5,True,Hard,synthetic
+SYN008,Dictionaries,6,False,Medium,synthetic
+SYN008,Exception Handling,1,False,Easy,synthetic
+SYN008,Exception Handling,2,True,Medium,synthetic
+SYN008,Exception Handling,3,True,Hard,synthetic
+SYN008,Exception Handling,4,True,Hard,synthetic
+SYN008,Exception Handling,5,True,Hard,synthetic
+SYN008,Exception Handling,6,True,Hard,synthetic
+SYN008,File Handling,1,True,Medium,synthetic
+SYN008,File Handling,2,True,Hard,synthetic
+SYN008,File Handling,3,False,Medium,synthetic
+SYN008,File Handling,4,True,Hard,synthetic
+SYN008,File Handling,5,False,Medium,synthetic
+SYN008,File Handling,6,True,Hard,synthetic
+SYN008,Recursion,1,False,Easy,synthetic
+SYN008,Recursion,2,True,Medium,synthetic
+SYN008,Recursion,3,True,Hard,synthetic
+SYN008,Recursion,4,True,Hard,synthetic
+SYN008,Recursion,5,True,Hard,synthetic
+SYN008,Recursion,6,True,Hard,synthetic
+SYN009,Variables and Data Types,1,True,Medium,synthetic
+SYN009,Variables and Data Types,2,False,Easy,synthetic
+SYN009,Variables and Data Types,3,False,Easy,synthetic
+SYN009,Variables and Data Types,4,True,Medium,synthetic
+SYN009,Variables and Data Types,5,False,Easy,synthetic
+SYN009,Variables and Data Types,6,False,Easy,synthetic
+SYN009,Operators,1,False,Easy,synthetic
+SYN009,Operators,2,True,Medium,synthetic
+SYN009,Operators,3,True,Hard,synthetic
+SYN009,Operators,4,False,Medium,synthetic
+SYN009,Operators,5,True,Hard,synthetic
+SYN009,Operators,6,True,Hard,synthetic
+SYN009,Conditional Statements,1,False,Easy,synthetic
+SYN009,Conditional Statements,2,True,Medium,synthetic
+SYN009,Conditional Statements,3,True,Hard,synthetic
+SYN009,Conditional Statements,4,True,Hard,synthetic
+SYN009,Conditional Statements,5,True,Hard,synthetic
+SYN009,Conditional Statements,6,True,Hard,synthetic
+SYN009,for Loop,1,True,Medium,synthetic
+SYN009,for Loop,2,True,Hard,synthetic
+SYN009,for Loop,3,False,Medium,synthetic
+SYN009,for Loop,4,False,Easy,synthetic
+SYN009,for Loop,5,True,Medium,synthetic
+SYN009,for Loop,6,True,Hard,synthetic
+SYN009,while Loop,1,True,Medium,synthetic
+SYN009,while Loop,2,False,Easy,synthetic
+SYN009,while Loop,3,False,Easy,synthetic
+SYN009,while Loop,4,True,Medium,synthetic
+SYN009,while Loop,5,True,Hard,synthetic
+SYN009,while Loop,6,True,Hard,synthetic
+SYN009,Function Definition,1,True,Medium,synthetic
+SYN009,Function Definition,2,False,Easy,synthetic
+SYN009,Function Definition,3,True,Medium,synthetic
+SYN009,Function Definition,4,True,Hard,synthetic
+SYN009,Function Definition,5,False,Medium,synthetic
+SYN009,Function Definition,6,True,Hard,synthetic
+SYN009,Parameters and Arguments,1,False,Easy,synthetic
+SYN009,Parameters and Arguments,2,True,Medium,synthetic
+SYN009,Parameters and Arguments,3,True,Hard,synthetic
+SYN009,Parameters and Arguments,4,True,Hard,synthetic
+SYN009,Parameters and Arguments,5,True,Hard,synthetic
+SYN009,Parameters and Arguments,6,True,Hard,synthetic
+SYN009,Return Values,1,False,Easy,synthetic
+SYN009,Return Values,2,True,Medium,synthetic
+SYN009,Return Values,3,True,Hard,synthetic
+SYN009,Return Values,4,False,Medium,synthetic
+SYN009,Return Values,5,True,Hard,synthetic
+SYN009,Return Values,6,True,Hard,synthetic
+SYN009,Variable Scope,1,True,Medium,synthetic
+SYN009,Variable Scope,2,False,Easy,synthetic
+SYN009,Variable Scope,3,True,Medium,synthetic
+SYN009,Variable Scope,4,True,Hard,synthetic
+SYN009,Variable Scope,5,True,Hard,synthetic
+SYN009,Variable Scope,6,True,Hard,synthetic
+SYN009,Lists,1,False,Easy,synthetic
+SYN009,Lists,2,True,Medium,synthetic
+SYN009,Lists,3,False,Easy,synthetic
+SYN009,Lists,4,False,Easy,synthetic
+SYN009,Lists,5,True,Medium,synthetic
+SYN009,Lists,6,True,Hard,synthetic
+SYN009,Tuples,1,False,Easy,synthetic
+SYN009,Tuples,2,True,Medium,synthetic
+SYN009,Tuples,3,False,Easy,synthetic
+SYN009,Tuples,4,True,Medium,synthetic
+SYN009,Tuples,5,True,Hard,synthetic
+SYN009,Tuples,6,True,Hard,synthetic
+SYN009,Dictionaries,1,False,Easy,synthetic
+SYN009,Dictionaries,2,True,Medium,synthetic
+SYN009,Dictionaries,3,True,Hard,synthetic
+SYN009,Dictionaries,4,True,Hard,synthetic
+SYN009,Dictionaries,5,False,Medium,synthetic
+SYN009,Dictionaries,6,True,Hard,synthetic
+SYN009,Exception Handling,1,False,Easy,synthetic
+SYN009,Exception Handling,2,False,Easy,synthetic
+SYN009,Exception Handling,3,True,Medium,synthetic
+SYN009,Exception Handling,4,False,Easy,synthetic
+SYN009,Exception Handling,5,True,Medium,synthetic
+SYN009,Exception Handling,6,False,Easy,synthetic
+SYN009,File Handling,1,False,Easy,synthetic
+SYN009,File Handling,2,False,Easy,synthetic
+SYN009,File Handling,3,True,Medium,synthetic
+SYN009,File Handling,4,True,Hard,synthetic
+SYN009,File Handling,5,True,Hard,synthetic
+SYN009,File Handling,6,False,Medium,synthetic
+SYN009,Recursion,1,False,Easy,synthetic
+SYN009,Recursion,2,True,Medium,synthetic
+SYN009,Recursion,3,True,Hard,synthetic
+SYN009,Recursion,4,True,Hard,synthetic
+SYN009,Recursion,5,True,Hard,synthetic
+SYN009,Recursion,6,True,Hard,synthetic
+SYN010,Variables and Data Types,1,True,Medium,synthetic
+SYN010,Variables and Data Types,2,True,Hard,synthetic
+SYN010,Variables and Data Types,3,True,Hard,synthetic
+SYN010,Variables and Data Types,4,True,Hard,synthetic
+SYN010,Variables and Data Types,5,True,Hard,synthetic
+SYN010,Variables and Data Types,6,True,Hard,synthetic
+SYN010,Operators,1,False,Easy,synthetic
+SYN010,Operators,2,True,Medium,synthetic
+SYN010,Operators,3,False,Easy,synthetic
+SYN010,Operators,4,True,Medium,synthetic
+SYN010,Operators,5,False,Easy,synthetic
+SYN010,Operators,6,True,Medium,synthetic
+SYN010,Conditional Statements,1,False,Easy,synthetic
+SYN010,Conditional Statements,2,False,Easy,synthetic
+SYN010,Conditional Statements,3,False,Easy,synthetic
+SYN010,Conditional Statements,4,True,Medium,synthetic
+SYN010,Conditional Statements,5,True,Hard,synthetic
+SYN010,Conditional Statements,6,True,Hard,synthetic
+SYN010,for Loop,1,False,Easy,synthetic
+SYN010,for Loop,2,False,Easy,synthetic
+SYN010,for Loop,3,False,Easy,synthetic
+SYN010,for Loop,4,True,Medium,synthetic
+SYN010,for Loop,5,True,Hard,synthetic
+SYN010,for Loop,6,True,Hard,synthetic
+SYN010,while Loop,1,False,Easy,synthetic
+SYN010,while Loop,2,True,Medium,synthetic
+SYN010,while Loop,3,False,Easy,synthetic
+SYN010,while Loop,4,True,Medium,synthetic
+SYN010,while Loop,5,True,Hard,synthetic
+SYN010,while Loop,6,False,Medium,synthetic
+SYN010,Function Definition,1,True,Medium,synthetic
+SYN010,Function Definition,2,False,Easy,synthetic
+SYN010,Function Definition,3,False,Easy,synthetic
+SYN010,Function Definition,4,False,Easy,synthetic
+SYN010,Function Definition,5,False,Easy,synthetic
+SYN010,Function Definition,6,False,Easy,synthetic
+SYN010,Parameters and Arguments,1,True,Medium,synthetic
+SYN010,Parameters and Arguments,2,True,Hard,synthetic
+SYN010,Parameters and Arguments,3,False,Medium,synthetic
+SYN010,Parameters and Arguments,4,False,Easy,synthetic
+SYN010,Parameters and Arguments,5,False,Easy,synthetic
+SYN010,Parameters and Arguments,6,True,Medium,synthetic
+SYN010,Return Values,1,True,Medium,synthetic
+SYN010,Return Values,2,False,Easy,synthetic
+SYN010,Return Values,3,False,Easy,synthetic
+SYN010,Return Values,4,False,Easy,synthetic
+SYN010,Return Values,5,True,Medium,synthetic
+SYN010,Return Values,6,True,Hard,synthetic
+SYN010,Variable Scope,1,True,Medium,synthetic
+SYN010,Variable Scope,2,False,Easy,synthetic
+SYN010,Variable Scope,3,False,Easy,synthetic
+SYN010,Variable Scope,4,True,Medium,synthetic
+SYN010,Variable Scope,5,True,Hard,synthetic
+SYN010,Variable Scope,6,False,Medium,synthetic
+SYN010,Lists,1,True,Medium,synthetic
+SYN010,Lists,2,False,Easy,synthetic
+SYN010,Lists,3,True,Medium,synthetic
+SYN010,Lists,4,True,Hard,synthetic
+SYN010,Lists,5,True,Hard,synthetic
+SYN010,Lists,6,True,Hard,synthetic
+SYN010,Tuples,1,False,Easy,synthetic
+SYN010,Tuples,2,False,Easy,synthetic
+SYN010,Tuples,3,True,Medium,synthetic
+SYN010,Tuples,4,True,Hard,synthetic
+SYN010,Tuples,5,False,Medium,synthetic
+SYN010,Tuples,6,True,Hard,synthetic
+SYN010,Dictionaries,1,True,Medium,synthetic
+SYN010,Dictionaries,2,False,Easy,synthetic
+SYN010,Dictionaries,3,True,Medium,synthetic
+SYN010,Dictionaries,4,True,Hard,synthetic
+SYN010,Dictionaries,5,True,Hard,synthetic
+SYN010,Dictionaries,6,True,Hard,synthetic
+SYN010,Exception Handling,1,True,Medium,synthetic
+SYN010,Exception Handling,2,False,Easy,synthetic
+SYN010,Exception Handling,3,False,Easy,synthetic
+SYN010,Exception Handling,4,True,Medium,synthetic
+SYN010,Exception Handling,5,True,Hard,synthetic
+SYN010,Exception Handling,6,True,Hard,synthetic
+SYN010,File Handling,1,True,Medium,synthetic
+SYN010,File Handling,2,False,Easy,synthetic
+SYN010,File Handling,3,True,Medium,synthetic
+SYN010,File Handling,4,True,Hard,synthetic
+SYN010,File Handling,5,True,Hard,synthetic
+SYN010,File Handling,6,True,Hard,synthetic
+SYN010,Recursion,1,True,Medium,synthetic
+SYN010,Recursion,2,True,Hard,synthetic
+SYN010,Recursion,3,True,Hard,synthetic
+SYN010,Recursion,4,True,Hard,synthetic
+SYN010,Recursion,5,True,Hard,synthetic
+SYN010,Recursion,6,True,Hard,synthetic

@@ -1,0 +1,29 @@
+{% extends 'base.html' %} {% block title %}Learning Session{% endblock %} {%
+block content %}
+<div class="card">
+    <div class="nav">
+        <a href="/learning-plan">Learning Plan</a> |
+        <a href="/dashboard">Dashboard</a>
+    </div>
+    <span class="badge">Guided learning</span>
+    <p class="meta">
+        {{ resource.topic }} · {{ resource.resource_type|replace('_', ' ')|title
+        }} · {{ resource.estimated_minutes }} minutes
+    </p>
+    <h1>{{ resource.title }}</h1>
+    <div class="panel"><p>{{ resource.content }}</p></div>
+    <h2>Ready to apply it?</h2>
+    <p class="meta">
+        Complete this learning session to continue into adaptive practice for
+        this topic.
+    </p>
+    <form method="post" class="panel">
+        <input
+            type="hidden"
+            name="learning_session_id"
+            value="{{ learning_session_id }}"
+        />
+        <button type="submit">Complete Learning and Practice</button>
+    </form>
+</div>
+{% endblock %}

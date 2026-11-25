@@ -1,0 +1,97 @@
+{% extends 'base.html' %} {% block title %}Admin Panel{% endblock %} {% block
+content %}
+<div class="card">
+    <div class="nav">
+        <a href="/teacher/">Teacher View</a> | <a href="/logout">Log out</a>
+    </div>
+    <span class="badge">System administration</span>
+    <h1>User Management</h1>
+    <p class="meta">
+        User profile and login status records. Passwords are never displayed;
+        only secure password resets are available.
+    </p>
+    {% if error %}
+    <p class="error">{{ error }}</p>
+    {% endif %} {% if success %}
+    <p class="success">{{ success }}</p>
+    {% endif %}
+    <div style="overflow-x: auto">
+        <table>
+            <thead>
+                <tr>
+                    <th>User</th>
+                    <th>Contact</th>
+                    <th>Role</th>
+                    <th>Details</th>
+                    <th>Created</th>
+                    <th>Security</th>
+                    <th>Remove</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for user in users %}
+                <tr>
+                    <td>
+                        <strong>{{ user.name }}</strong><br /><span class="meta"
+                            >{{ user.student_code }}</span
+                        >
+                    </td>
+                    <td>{{ user.email }}</td>
+                    <td><span class="badge">{{ user.role }}</span></td>
+                    <td>
+                        {{ user.department or 'Not provided' }}{% if
+                        user.semester %}<br /><span class="meta"
+                            >Semester {{ user.semester }}</span
+                        >{% endif %}
+                    </td>
+                    <td>{{ user.created_at }}</td>
+                    <td>
+                        <form method="post">
+                            <input
+                                type="hidden"
+                                name="action"
+                                value="reset_password"
+                            /><input
+                                type="hidden"
+                                name="user_id"
+                                value="{{ user.id }}"
+                            /><input
+                                type="password"
+                                name="new_password"
+                                minlength="8"
+                                placeholder="New password"
+                                required
+                            /><button type="submit">Reset</button>
+                        </form>
+                    </td>
+                    <td>
+                        {% if user.id == session.user_id %}<span class="meta"
+                            >Current admin</span
+                        >{% else %}
+                        <form
+                            method="post"
+                            onsubmit="
+                                return confirm(
+                                    'Permanently remove this user and their learning records?',
+                                );
+                            "
+                        >
+                            <input
+                                type="hidden"
+                                name="action"
+                                value="delete"
+                            /><input
+                                type="hidden"
+                                name="user_id"
+                                value="{{ user.id }}"
+                            /><button type="submit">Remove</button>
+                        </form>
+                        {% endif %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

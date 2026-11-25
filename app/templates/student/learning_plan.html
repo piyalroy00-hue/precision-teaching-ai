@@ -1,0 +1,48 @@
+{% extends 'base.html' %} {% block title %}Learning Plan{% endblock %} {% block
+content %}
+<div class="card">
+    <div class="nav">
+        <a href="/dashboard">Dashboard</a> |
+        <a href="/assessment">Assessment</a> | <a href="/logout">Log out</a>
+    </div>
+    <h1>Your Personalized Learning Plan</h1>
+    <p class="meta">
+        Recommendations are prioritized from your current mastery,
+        prerequisites, and recent performance.
+    </p>
+    {% if plan %}
+    <div class="grid">
+        {% for item in plan %}
+        <section class="panel">
+            <span class="badge">Priority {{ item.priority }}</span>
+            <h2>{{ loop.index }}. {{ item.topic }}</h2>
+            <div class="metrics">
+                <div class="metric">
+                    <div class="metric-label">Mastery</div>
+                    <div class="metric-value">
+                        {{ '%.0f'|format(item.mastery * 100) }}%
+                    </div>
+                </div>
+                <div class="metric">
+                    <div class="metric-label">Difficulty</div>
+                    <div class="metric-value">{{ item.difficulty }}</div>
+                </div>
+            </div>
+            <p>{{ item.reason }}</p>
+            <p class="meta">
+                Estimated time: {{ item.estimated_minutes }} minutes
+            </p>
+            <a href="/learning/{{ item.resource_id }}"
+                ><button type="button">Start Learning</button></a
+            >
+        </section>
+        {% endfor %}
+    </div>
+    {% else %}
+    <p>
+        Your current knowledge states are mastered. Complete another assessment
+        to refresh the plan.
+    </p>
+    {% endif %}
+</div>
+{% endblock %}

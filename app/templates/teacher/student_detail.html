@@ -1,0 +1,37 @@
+{% extends 'base.html' %} {% block title %}Student Analytics{% endblock %} {%
+block content %}
+<div class="card">
+    <div class="nav"><a href="/teacher/">Teacher Dashboard</a></div>
+    <span class="badge">Student analytics</span>
+    <h1>{{ student.code }}: {{ student.name }}</h1>
+    <div class="metrics">
+        <div class="metric">
+            <div class="metric-label">Completed Sessions</div>
+            <div class="metric-value">{{ report.completed_sessions }}</div>
+        </div>
+        <div class="metric">
+            <div class="metric-label">Learning Time</div>
+            <div class="metric-value">{{ report.learning_minutes }}m</div>
+        </div>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Topic</th>
+                <th>Mastery</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in report.topic_mastery %}
+            <tr>
+                <td>{{ item.topic }}</td>
+                <td>{{ '%.0f'|format(item.mastery * 100) }}%</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <p class="meta panel">
+        Private AI conversation content is not shown in teacher analytics.
+    </p>
+</div>
+{% endblock %}

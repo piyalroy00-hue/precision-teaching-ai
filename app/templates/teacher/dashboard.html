@@ -1,0 +1,89 @@
+{% extends 'base.html' %} {% block title %}Teacher Dashboard{% endblock %} {%
+block content %}
+<div class="card">
+    <div class="nav">
+        <a href="/logout">Log out</a>
+    </div>
+    <span class="badge">Instructor analytics</span>
+    <h1>Teacher Dashboard</h1>
+    <p class="meta">Class-level performance and intervention signals.</p>
+    <div class="metrics">
+        <div class="metric">
+            <div class="metric-label">Students</div>
+            <div class="metric-value">{{ overview.student_count }}</div>
+        </div>
+        <div class="metric">
+            <div class="metric-label">Average Mastery</div>
+            <div class="metric-value">
+                {{ '%.0f'|format(overview.average_mastery * 100) }}%
+            </div>
+        </div>
+        <div class="metric">
+            <div class="metric-label">Need Intervention</div>
+            <div class="metric-value">
+                {{ overview.students_requiring_intervention }}
+            </div>
+        </div>
+    </div>
+    <h2>Topic Analytics</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Topic</th>
+                <th>Average Mastery</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in overview.topic_mastery %}
+            <tr>
+                <td>{{ item.topic }}</td>
+                <td>{{ '%.0f'|format(item.mastery * 100) }}%</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <h2>All Student Performance</h2>
+    <div style="overflow-x: auto">
+        <table>
+            <thead>
+                <tr>
+                    <th>Student</th>
+                    <th>Average Mastery</th>
+                    <th>Attempts</th>
+                    <th>Accuracy</th>
+                    <th>Completed Sessions</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for student in performance %}
+                <tr>
+                    <td>
+                        <a href="/teacher/students/{{ student.id }}"
+                            >{{ student.code }} - {{ student.name }}</a
+                        >
+                    </td>
+                    <td>{{ '%.0f'|format(student.average_mastery * 100) }}%</td>
+                    <td>{{ student.attempts }}</td>
+                    <td>{{ '%.0f'|format(student.accuracy * 100) }}%</td>
+                    <td>{{ student.completed_sessions }}</td>
+                    <td>
+                        <span class="badge"
+                            >{{ 'Needs intervention' if
+                            student.requires_intervention else 'On track'
+                            }}</span
+                        >
+                    </td>
+                </tr>
+                {% else %}
+                <tr>
+                    <td colspan="6" class="meta">
+                        No student records are available yet.
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

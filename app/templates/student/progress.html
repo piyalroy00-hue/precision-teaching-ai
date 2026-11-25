@@ -1,0 +1,65 @@
+{% extends 'base.html' %} {% block title %}Progress{% endblock %} {% block
+content %}
+<div class="card">
+    <div class="nav">
+        <a href="/dashboard">Dashboard</a> |
+        <a href="/learning-plan">Learning Plan</a> |
+        <a href="/logout">Log out</a>
+    </div>
+    <h1>Learning Progress</h1>
+    <div class="metrics">
+        <div class="metric">
+            <div class="metric-label">Attempts</div>
+            <div class="metric-value">{{ attempts }}</div>
+        </div>
+        <div class="metric">
+            <div class="metric-label">Learning Time</div>
+            <div class="metric-value">{{ learning_minutes }}m</div>
+        </div>
+        <div class="metric">
+            <div class="metric-label">Completed Sessions</div>
+            <div class="metric-value">
+                {{ completed_sessions }} / {{ total_sessions }}
+            </div>
+        </div>
+    </div>
+    <h2>Difficulty Progression</h2>
+    <div class="metrics">
+        <div class="metric">
+            <div class="metric-label">Easy</div>
+            <div class="metric-value">{{ difficulty_counts.Easy }}</div>
+        </div>
+        <div class="metric">
+            <div class="metric-label">Medium</div>
+            <div class="metric-value">{{ difficulty_counts.Medium }}</div>
+        </div>
+        <div class="metric">
+            <div class="metric-label">Hard</div>
+            <div class="metric-value">{{ difficulty_counts.Hard }}</div>
+        </div>
+    </div>
+    <h2>Mastery Progression</h2>
+    {% if progress_rows %}
+    <table>
+        <thead>
+            <tr>
+                <th>Topic</th>
+                <th>Mastery</th>
+                <th>Recorded</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in progress_rows %}
+            <tr>
+                <td>{{ item.topic }}</td>
+                <td>{{ '%.0f'|format(item.mastery * 100) }}%</td>
+                <td>{{ item.recorded_at }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <p>Complete adaptive practice to begin tracking mastery progression.</p>
+    {% endif %}
+</div>
+{% endblock %}

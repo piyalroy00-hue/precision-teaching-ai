@@ -1,0 +1,63 @@
+{% extends 'base.html' %} {% block title %}Assessment{% endblock %} {% block
+content %}
+<div class="card">
+    <div class="nav">
+        <a href="/dashboard">Dashboard</a> |
+        <a href="/assessment">Assessment</a> | <a href="/logout">Log out</a>
+    </div>
+
+    {% if completed %}
+    <span class="badge">Diagnostic complete</span>
+    <h1>Assessment completed</h1>
+    <div class="metrics">
+        <div class="metric">
+            <div class="metric-label">Total score</div>
+            <div class="metric-value">
+                {{ '%.1f'|format(total_score) }} / {{
+                '%.1f'|format(total_possible) }}
+            </div>
+        </div>
+        <div class="metric">
+            <div class="metric-label">Percentage</div>
+            <div class="metric-value">{{ '%.1f'|format(percentage) }}%</div>
+        </div>
+    </div>
+    <a href="/assessment"
+        ><button type="button">Start Another Assessment</button></a
+    >
+    {% elif ready %}
+    <h1>Diagnostic Assessment</h1>
+    <p class="meta">
+        Question {{ question_index + 1 }} of {{ total_questions }} · {{
+        question_topic }} · {{ question_difficulty }}
+    </p>
+    <div class="panel"><h3>{{ question_text }}</h3></div>
+
+    {% if error %}
+    <p class="error">{{ error }}</p>
+    {% endif %}
+
+    <form method="post">
+        <input type="hidden" name="action" value="submit" />
+        {% for option in options %}
+        <label class="answer"
+            ><input type="radio" name="answer" value="{{ option }}" required />
+            {{ option }}</label
+        >
+        {% endfor %}
+        <button type="submit">Submit answer</button>
+    </form>
+    {% else %}
+    <span class="badge">Python Programming</span>
+    <h1>Diagnostic Assessment</h1>
+    <p>
+        Take a fixed diagnostic assessment covering all Python Programming
+        topics.
+    </p>
+    <form method="post" class="panel">
+        <input type="hidden" name="action" value="start" />
+        <button type="submit">Start Diagnostic Assessment</button>
+    </form>
+    {% endif %}
+</div>
+{% endblock %}

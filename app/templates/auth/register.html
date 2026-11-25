@@ -1,0 +1,49 @@
+{% extends 'base.html' %} {% block title %}Register{% endblock %} {% block
+content %}
+<div class="card">
+    <span class="badge">Precision Teaching AI</span>
+    <h1>Create your learner profile</h1>
+    <p class="meta">
+        Set up a profile to receive diagnostic and personalized learning
+        support.
+    </p>
+    <div class="nav">
+        <a href="/">Login</a> | <a href="/register">Register</a>
+    </div>
+
+    {% if error %}
+    <p class="error">{{ error }}</p>
+    {% endif %} {% if success %}
+    <p class="success">{{ success }}</p>
+    <p><a href="/">Log in</a></p>
+    {% else %}
+    <form method="post" class="panel">
+        <label
+            >Student code
+            <input type="text" name="student_code" required />
+        </label>
+        <label
+            >Full name
+            <input type="text" name="name" required />
+        </label>
+        <label
+            >Email
+            <input type="email" name="email" required />
+        </label>
+        <label
+            >Department
+            <input type="text" name="department" value="Computer Science" />
+        </label>
+        <label
+            >Semester
+            <input type="number" name="semester" min="1" max="12" value="1" />
+        </label>
+        <label
+            >Password
+            <input type="password" name="password" required />
+        </label>
+        <button type="submit">Create account</button>
+    </form>
+    {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends 'base.html' %} {% block title %}Adaptive Practice{% endblock %} {%
+block content %}
+<div class="card">
+    <div class="nav">
+        <a href="/learning-plan">Learning Plan</a> |
+        <a href="/dashboard">Dashboard</a>
+    </div>
+    <span class="badge">Adaptive practice</span>
+    <h1>Adaptive Practice: {{ topic_name }}</h1>
+    <p class="meta">
+        Current Mastery: {{ '%.0f'|format(mastery * 100) }}% · Difficulty: {{
+        difficulty }}
+    </p>
+    {% if feedback %}
+    <p class="{{ 'success' if feedback.correct else 'error' }}">
+        {{ 'Correct' if feedback.correct else 'Incorrect' }}
+    </p>
+    <p>
+        Previous mastery: {{ '%.0f'|format(feedback.previous * 100) }}% ·
+        Updated mastery: {{ '%.0f'|format(feedback.updated * 100) }}% · Next
+        difficulty: {{ feedback.next_difficulty }}
+    </p>
+    {% endif %} {% if question %}
+    <div class="panel"><h3>{{ question.text }}</h3></div>
+    <form method="post">
+        <input type="hidden" name="question_id" value="{{ question.id }}" />
+        {% for option in question.options %}
+        <label class="answer"
+            ><input type="radio" name="answer" value="{{ option }}" required />
+            {{ option }}</label
+        >
+        {% endfor %}
+        <button type="submit">Submit Answer</button>
+    </form>
+    {% else %}
+    <p>
+        No more questions are available for this topic. Return to your learning
+        plan for another recommendation.
+    </p>
+    {% endif %}
+</div>
+{% endblock %}

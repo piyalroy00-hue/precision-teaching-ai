@@ -1,0 +1,237 @@
+question_id,subject,topic,subtopic,question_type,difficulty,question_text,option_a,option_b,option_c,option_d,correct_answer,explanation,marks,source
+1,Python Programming,Variables and Data Types,,MCQ,Easy,What is the data type of `x` after `x = 10`?,int,float,str,bool,int,A whole number literal without a decimal point creates an `int`.,1,generated
+2,Python Programming,Variables and Data Types,,MCQ,Medium,"What is the value and type of `x` after `x = ""5"" + ""5""`?","""55""  (str)",10 (int),55 (int),Error,"""55""  (str)","The `+` operator on two strings concatenates them, giving the string ""55"".",2,generated
+3,Python Programming,Variables and Data Types,,MCQ,Hard,"What does `print(5 == int(""5""))` output?",True,False,TypeError,5,True,"`int(""5"")` converts the string to the integer 5, and `5 == 5` is True.",3,generated
+4,Python Programming,Variables and Data Types,,TRUE_FALSE,Easy,"In Python, a variable's type must be declared explicitly before assignment.",True,False,,,False,Python is dynamically typed; a variable's type is inferred from its assigned value.,1,generated
+5,Python Programming,Operators,,MCQ,Easy,What is the result of `10 % 3`?,1,3,0,3.33,1,"`%` is the modulo operator, returning the remainder of the division (10 / 3 = 3 remainder 1).",1,generated
+6,Python Programming,Operators,,MCQ,Medium,What is the result of `2 ** 3 ** 2`?,512,64,36,8,512,"`**` is right-associative, so this evaluates as `2 ** (3 ** 2)` = `2 ** 9` = 512.",2,generated
+7,Python Programming,Operators,,MCQ,Hard,"What does `bool(0 or """" or [] or ""a"")` evaluate to?",True,False,None,Error,True,"`or` returns the first truthy operand; 0, """" and [] are falsy, but ""a"" is truthy.",3,generated
+8,Python Programming,Operators,,TRUE_FALSE,Easy,The `//` operator performs floor (integer) division in Python.,True,False,,,True,`//` divides and rounds down to the nearest whole number.,1,generated
+9,Python Programming,Conditional Statements,,MCQ,Easy,"What is printed by:
+```
+x = 5
+if x > 10:
+    print(""A"")
+elif x > 3:
+    print(""B"")
+else:
+    print(""C"")
+```",B,A,C,Nothing,B,"`x > 10` is False, `x > 3` is True, so the `elif` branch runs, printing B.",1,generated
+10,Python Programming,Conditional Statements,,MCQ,Medium,"What is printed by:
+```
+x = 7
+if x % 2 == 0:
+    print(""Even"")
+else:
+    if x > 5:
+        print(""Odd and big"")
+    else:
+        print(""Odd and small"")
+```",Odd and big,Even,Odd and small,Error,Odd and big,"7 is odd, so the nested `if` runs; since 7 > 5, it prints ""Odd and big"".",2,generated
+11,Python Programming,Conditional Statements,,MCQ,Hard,What does `1 < 2 < 3` evaluate to in Python?,True,False,2,SyntaxError,True,"Python supports chained comparisons: this is equivalent to `(1 < 2) and (2 < 3)`, both True.",3,generated
+12,Python Programming,Conditional Statements,,TRUE_FALSE,Easy,An `elif` block can be used without a preceding `if` block.,True,False,,,False,`elif` is only valid immediately following an `if` (or another `elif`) block.,1,generated
+13,Python Programming,Loops,for Loop,MCQ,Easy,What is printed by `for i in range(3): print(i)`?,0 1 2,1 2 3,0 1 2 3,1 2,0 1 2,"`range(3)` produces 0, 1, 2 (stops before 3).",1,generated
+14,Python Programming,Loops,for Loop,MCQ,Medium,"What is the sum of values produced by `range(1, 10, 2)`?",25,45,20,30,25,"`range(1, 10, 2)` gives 1, 3, 5, 7, 9, which sum to 25.",2,generated
+15,Python Programming,Loops,for Loop,MCQ,Hard,"What is printed by:
+```
+for i in range(5):
+    if i == 3:
+        break
+else:
+    print(""Completed"")
+print(i)
+```",3,Completed 3,4,Completed 4,3,"`break` at i==3 skips the loop's `else` clause; only `print(i)` runs, printing 3.",3,generated
+16,Python Programming,Loops,for Loop,TRUE_FALSE,Medium,The `else` block of a `for` loop executes only if the loop completes without hitting a `break`.,True,False,,,True,A loop's `else` clause is skipped whenever the loop is exited via `break`.,1,generated
+17,Python Programming,Loops,while Loop,MCQ,Easy,"What is printed by:
+```
+n = 3
+while n > 0:
+    print(n)
+    n -= 1
+```",3 2 1,3 2 1 0,1 2 3,2 1 0,3 2 1,"The loop prints `n` then decrements, stopping once `n > 0` is False (after printing 1).",1,generated
+18,Python Programming,Loops,while Loop,MCQ,Medium,"What is printed by:
+```
+n = 0
+while n < 5:
+    n += 1
+    if n == 3:
+        continue
+    print(n)
+```",1 2 4 5,1 2 3 4 5,1 2 4,2 4 5,1 2 4 5,"`continue` skips the `print` only when `n == 3`; all other values (1,2,4,5) are printed.",2,generated
+19,Python Programming,Loops,while Loop,MCQ,Hard,"What is printed by:
+```
+count = 0
+while True:
+    count += 1
+    if count == 4:
+        break
+print(count)
+```",4,3,Infinite loop,0,4,"`while True` loops until `break` is hit at `count == 4`, so 4 is printed.",3,generated
+20,Python Programming,Loops,while Loop,TRUE_FALSE,Easy,"A `while` loop's condition is checked before every iteration, including the first.",True,False,,,True,`while` is a pre-test loop; the body never runs if the condition is False initially.,1,generated
+21,Python Programming,Functions,Function Definition,MCQ,Easy,Which keyword is used to define a function in Python?,def,func,function,define,def,Functions are defined with the `def` keyword followed by the function name and parentheses.,1,generated
+22,Python Programming,Functions,Function Definition,MCQ,Medium,"What does `greet()` return?
+```
+def greet():
+    print(""hi"")
+result = greet()
+```",None,"""hi""",0,Error,None,A function without an explicit `return` statement returns `None` by default.,2,generated
+23,Python Programming,Functions,Function Definition,MCQ,Hard,"What is printed on the second call?
+```
+def add_item(item, bucket=[]):
+    bucket.append(item)
+    return bucket
+
+add_item(1)
+print(add_item(2))
+```","[1, 2]",[2],[1],Error,"[1, 2]","Mutable default arguments are created once and persist across calls, so `bucket` accumulates items.",3,generated
+24,Python Programming,Functions,Function Definition,TRUE_FALSE,Easy,A Python function can be defined without any parameters.,True,False,,,True,"A function may take zero parameters, e.g. `def greet(): ...`.",1,generated
+25,Python Programming,Functions,Parameters and Arguments,MCQ,Easy,"What is printed by:
+```
+def power(base, exp):
+    return base ** exp
+print(power(exp=2, base=3))
+```",9,6,8,Error,9,"Keyword arguments can be passed in any order; `base=3, exp=2` gives `3 ** 2 = 9`.",1,generated
+26,Python Programming,Functions,Parameters and Arguments,MCQ,Medium,"What is printed by:
+```
+def greet(name, greeting=""Hello""):
+    return f""{greeting}, {name}!""
+print(greet(""Alex""))
+```","Hello, Alex!","Alex, Hello!",Error,None,"Hello, Alex!","`greeting` uses its default value ""Hello"" since no second argument was supplied.",2,generated
+27,Python Programming,Functions,Parameters and Arguments,MCQ,Hard,"What is printed by:
+```
+def total(*args, **kwargs):
+    return sum(args) + sum(kwargs.values())
+print(total(1, 2, x=3, y=4))
+```",10,3,7,Error,10,"`*args` collects (1, 2) and `**kwargs` collects {x:3, y:4}; 1+2+3+4 = 10.",3,generated
+28,Python Programming,Functions,Parameters and Arguments,TRUE_FALSE,Medium,"Default parameter values are evaluated once, at function definition time, not on every call.",True,False,,,True,This is why mutable default arguments (like lists) can cause unexpected shared state across calls.,1,generated
+29,Python Programming,Functions,Return Values,MCQ,Easy,What does the `return` statement do in a function?,Sends a value back to the caller and ends the function,Prints a value to the console,Declares a new variable,Restarts the function,Sends a value back to the caller and ends the function,"`return` immediately exits the function, optionally passing a value back to the caller.",1,generated
+30,Python Programming,Functions,Return Values,MCQ,Medium,"What is printed by:
+```
+def min_max(nums):
+    return min(nums), max(nums)
+lo, hi = min_max([4, 1, 7])
+print(lo, hi)
+```",1 7,7 1,"(1, 7)",Error,1 7,"Returning `min(nums), max(nums)` returns a tuple, which is unpacked into `lo` and `hi`.",2,generated
+31,Python Programming,Functions,Return Values,MCQ,Hard,"What is printed by:
+```
+def check(n):
+    if n > 0:
+        return ""positive""
+    if n < 0:
+        return ""negative""
+print(check(0))
+```",None,"""zero""",0,Error,None,"Neither condition is true for `n=0`, so the function falls through and returns `None` implicitly.",3,generated
+32,Python Programming,Functions,Return Values,TRUE_FALSE,Easy,A function can have multiple `return` statements in different branches.,True,False,,,True,"Only one `return` executes per call, but a function may contain several in different branches.",1,generated
+33,Python Programming,Functions,Variable Scope,MCQ,Medium,"What is printed by:
+```
+x = 10
+def show():
+    x = 20
+    print(x)
+show()
+print(x)
+```",20 10,10 10,20 20,Error,20 10,The `x` inside `show()` is a separate local variable and doesn't affect the global `x`.,2,generated
+34,Python Programming,Functions,Variable Scope,MCQ,Medium,"What is printed by:
+```
+count = 0
+def increment():
+    global count
+    count += 1
+increment()
+increment()
+print(count)
+```",2,0,1,Error,2,"`global count` lets the function modify the module-level `count`, incrementing it twice.",2,generated
+35,Python Programming,Functions,Variable Scope,MCQ,Hard,"What is printed by:
+```
+def outer():
+    x = ""outer""
+    def inner():
+        nonlocal x
+        x = ""inner""
+    inner()
+    return x
+print(outer())
+```",inner,outer,Error,None,inner,"`nonlocal x` binds to the enclosing scope's `x`, so `inner()` overwrites it to ""inner"".",3,generated
+36,Python Programming,Functions,Variable Scope,TRUE_FALSE,Easy,Variables defined inside a function are accessible outside it by default.,True,False,,,False,Local variables only exist within the function's local scope and are discarded after it returns.,1,generated
+37,Python Programming,Lists,,MCQ,Easy,"What is printed by `print([10, 20, 30][1])`?",20,10,30,Error,20,"List indexing is zero-based, so index 1 refers to the second element, 20.",1,generated
+38,Python Programming,Lists,,MCQ,Medium,"What is printed by `print([1, 2, 3, 4, 5][1:4])`?","[2, 3, 4]","[1, 2, 3, 4]","[2, 3, 4, 5]","[3, 4]","[2, 3, 4]","Slicing `[1:4]` includes indices 1, 2, 3 (stop index 4 is excluded).",2,generated
+39,Python Programming,Lists,,MCQ,Hard,"What is printed by:
+```
+a = [1, 2, 3]
+b = a
+b.append(4)
+print(a)
+```","[1, 2, 3, 4]","[1, 2, 3]",[4],Error,"[1, 2, 3, 4]","`b = a` makes `b` reference the same list object, so modifying `b` also changes `a`.",3,generated
+40,Python Programming,Lists,,TRUE_FALSE,Easy,Lists in Python are mutable (their contents can be changed after creation).,True,False,,,True,"Lists support in-place operations like `append`, `remove`, and item assignment.",1,generated
+41,Python Programming,Tuples,,MCQ,Easy,Which of the following correctly creates a tuple?,"(1, 2, 3)","[1, 2, 3]","{1, 2, 3}","<1, 2, 3>","(1, 2, 3)",Tuples use parentheses (or just comma-separated values); square brackets create lists.,1,generated
+42,Python Programming,Tuples,,MCQ,Medium,"What happens when running:
+```
+t = (1, 2, 3)
+t[0] = 10
+```",TypeError is raised,"t becomes (10, 2, 3)","t becomes [10, 2, 3]",Nothing happens,TypeError is raised,"Tuples are immutable, so item assignment raises `TypeError: 'tuple' object does not support item assignment`.",2,generated
+43,Python Programming,Tuples,,MCQ,Hard,"What is printed by:
+```
+a, b, *c = (1, 2, 3, 4, 5)
+print(a, b, c)
+```","1 2 [3, 4, 5]","1 2 (3, 4, 5)",1 2 3,Error,"1 2 [3, 4, 5]","The starred target `*c` collects the remaining items into a list: [3, 4, 5].",3,generated
+44,Python Programming,Tuples,,TRUE_FALSE,Easy,"Tuples support item assignment, just like lists.",True,False,,,False,"Tuples are immutable; once created, their elements cannot be reassigned.",1,generated
+45,Python Programming,Dictionaries,,MCQ,Easy,"What is printed by:
+```
+d = {""a"": 1, ""b"": 2}
+print(d[""b""])
+```",2,1,b,Error,2,"Dictionary values are accessed by their key; `d[""b""]` returns 2.",1,generated
+46,Python Programming,Dictionaries,,MCQ,Medium,"What is printed by:
+```
+d = {""a"": 1}
+print(d.get(""z"", 0))
+```",0,None,KeyError,z,0,"`.get(key, default)` returns the default value (0) when the key is missing, instead of raising an error.",2,generated
+47,Python Programming,Dictionaries,,MCQ,Hard,"What is printed by:
+```
+d = {x: x * x for x in range(4)}
+print(d[3])
+```",9,3,6,KeyError,9,"The dict comprehension maps each `x` to `x*x`; for key 3, the value is 3*3 = 9.",3,generated
+48,Python Programming,Dictionaries,,TRUE_FALSE,Easy,Dictionary keys must be unique within a dictionary.,True,False,,,True,Assigning to an existing key overwrites its value rather than creating a duplicate key.,1,generated
+49,Python Programming,Exception Handling,,MCQ,Easy,Which keywords are used together to handle exceptions in Python?,try / except,catch / throw,handle / raise,test / error,try / except,Python uses `try` to wrap risky code and `except` to catch and handle raised exceptions.,1,generated
+50,Python Programming,Exception Handling,,MCQ,Medium,"What is printed by:
+```
+try:
+    x = 10 / 0
+except ZeroDivisionError:
+    print(""caught"")
+except Exception:
+    print(""other"")
+```",caught,other,Error,Nothing,caught,"The specific `ZeroDivisionError` handler matches first, printing ""caught"".",2,generated
+51,Python Programming,Exception Handling,,MCQ,Hard,"What is printed by:
+```
+try:
+    print(""A"")
+    raise ValueError
+    print(""B"")
+except ValueError:
+    print(""C"")
+finally:
+    print(""D"")
+```",A C D,A B C D,A D,A C,A C D,"""A"" prints, the raise skips ""B"", ""C"" handles the exception, then ""D"" always runs in `finally`.",3,generated
+52,Python Programming,Exception Handling,,TRUE_FALSE,Easy,The `finally` block executes whether or not an exception occurred.,True,False,,,True,"`finally` always runs, used for cleanup actions like closing files or releasing resources.",1,generated
+53,Python Programming,File Handling,,MCQ,Easy,Which mode opens a file for reading only?,'r','w','a','x','r',`'r'` (read) is the default mode used to open an existing file for reading.,1,generated
+54,Python Programming,File Handling,,MCQ,Medium,"What is the main benefit of `with open(""f.txt"") as f: ...` over `f = open(""f.txt"")`?",The file is automatically closed when the block ends,It reads the file faster,It opens the file in binary mode,It prevents the file from being modified,The file is automatically closed when the block ends,The `with` statement is a context manager that guarantees the file is closed even if an error occurs.,2,generated
+55,Python Programming,File Handling,,MCQ,Hard,What is the key difference between opening a file with mode `'a'` versus mode `'w'`?,'a' appends to existing content; 'w' truncates (erases) it first,'a' truncates content; 'w' appends to it,They behave identically for text files,'a' opens read-only; 'w' opens write-only,'a' appends to existing content; 'w' truncates (erases) it first,"Mode `'w'` overwrites the file's existing content, while `'a'` appends new writes after it.",3,generated
+56,Python Programming,File Handling,,TRUE_FALSE,Easy,Using `with open(...) as f:` automatically closes the file when the block exits.,True,False,,,True,"The context manager's `__exit__` closes the file automatically, even on exceptions.",1,generated
+57,Python Programming,Recursion,,MCQ,Easy,What best describes recursion?,A function that calls itself to solve smaller instances of a problem,A loop that never terminates,A function defined inside another function,A way to catch exceptions,A function that calls itself to solve smaller instances of a problem,"Recursive functions call themselves with a reduced input, moving toward a base case.",1,generated
+58,Python Programming,Recursion,,MCQ,Medium,"What is printed by:
+```
+def factorial(n):
+    if n == 0:
+        return 1
+    return n * factorial(n - 1)
+print(factorial(4))
+```",24,10,4,1,24,"`factorial(4) = 4*3*2*1*1 = 24`, computed via the recursive base case at n == 0.",2,generated
+59,Python Programming,Recursion,,MCQ,Hard,"What is printed by:
+```
+def fib(n):
+    if n <= 1:
+        return n
+    return fib(n - 1) + fib(n - 2)
+print(fib(5))
+```",5,8,3,13,5,"The Fibonacci sequence 0,1,1,2,3,5,... gives `fib(5) = 5`.",3,generated
+60,Python Programming,Recursion,,TRUE_FALSE,Easy,Every recursive function must have a base case to avoid infinite recursion.,True,False,,,True,"Without a base case, a recursive function calls itself indefinitely, eventually raising a `RecursionError`.",1,generated
