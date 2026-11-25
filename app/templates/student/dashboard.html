@@ -1,14 +1,6 @@
 {% extends 'base.html' %} {% block title %}Dashboard{% endblock %} {% block
 content %}
 <div class="card">
-    <div class="nav">
-        <a href="/dashboard">Dashboard</a> |
-        <a href="/assessment">Assessment</a> |
-        <a href="/learning-plan">Learning Plan</a> |
-        <a href="/progress">Progress</a> | <a href="/tutor">AI Tutor</a> |
-        <a href="/logout">Log out</a>
-    </div>
-
     <h1>Student Knowledge Profile</h1>
     <p class="meta"><strong>{{ user_name }}</strong> · {{ student_code }}</p>
     <div class="panel">
