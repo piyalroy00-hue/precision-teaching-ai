@@ -65,3 +65,25 @@ def register():
 def logout():
     session.clear()
     return redirect("/")
+
+
+@bp.route("/setup-admin", methods=["GET", "POST"])
+def setup_admin():
+    """One-time admin setup endpoint (use only once, then delete this route)."""
+    if request.method == "POST":
+        email = request.form.get("email", "").strip()
+        if not email:
+            return render_template("auth/setup_admin.html", error="Email is required.")
+        
+        try:
+            with get_session() as db_session:
+                user = db_session.query(__import__('app.models', fromlist=['User']).User).filter_by(email=email).one_or_none()
+                if user is None:
+                    return render_template("auth/setup_admin.html", error=f"No user found with email: {email}")
+                user.role = "admin"
+                db_session.commit()
+            return render_template("auth/setup_admin.html", success=f"✓ Promoted {email} to admin!")
+        except Exception as exc:
+            return render_template("auth/setup_admin.html", error=str(exc))
+    
+    return render_template("auth/setup_admin.html")
