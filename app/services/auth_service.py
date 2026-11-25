@@ -9,6 +9,10 @@ class AuthError(Exception):
     pass
 
 
+def normalize_email(email: str) -> str:
+    return email.strip().lower()
+
+
 def register_student(
     session: Session,
     student_code: str,
@@ -18,6 +22,7 @@ def register_student(
     department: str | None = None,
     semester: int | None = None,
 ) -> User:
+    email = normalize_email(email)
     if session.query(User).filter_by(email=email).first() is not None:
         raise AuthError(f"An account with email '{email}' already exists.")
     if session.query(User).filter_by(student_code=student_code).first() is not None:
@@ -38,7 +43,7 @@ def register_student(
 
 
 def authenticate(session: Session, email: str, password: str) -> User:
-    user = session.query(User).filter_by(email=email).one_or_none()
+    user = session.query(User).filter_by(email=normalize_email(email)).one_or_none()
     if user is None or not verify_password(password, user.password_hash):
         raise AuthError("Invalid email or password.")
     return user

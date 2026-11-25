@@ -44,11 +44,25 @@ def current_adaptive_difficulty(session: Session, student_id: int, topic_id: int
 
 
 def submit_adaptive_response(
-    session: Session, assessment_id: int, student_id: int, question_id: int, answer: str, time_taken: float = 0.0
+    session: Session,
+    assessment_id: int,
+    student_id: int,
+    question_id: int,
+    answer: str,
+    time_taken: float = 0.0,
+    expected_topic_id: int | None = None,
 ) -> tuple[Response, float, float, str]:
+    assessment = session.get(Assessment, assessment_id)
+    if assessment is None:
+        raise ValueError(f"Assessment {assessment_id} does not exist.")
+    if assessment.student_id != student_id or assessment.assessment_type != "adaptive":
+        raise ValueError("Adaptive assessment does not belong to this student.")
+
     question = session.get(Question, question_id)
     if question is None:
         raise ValueError(f"Question {question_id} does not exist.")
+    if expected_topic_id is not None and question.topic_id != expected_topic_id:
+        raise ValueError("Question does not belong to the current adaptive topic.")
     state = get_or_create_knowledge_state(session, student_id, question.topic_id)
     previous_mastery = state.mastery_probability
     response = submit_response(session, assessment_id, student_id, question_id, answer, time_taken)

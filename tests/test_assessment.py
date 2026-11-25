@@ -127,7 +127,32 @@ def test_complete_assessment_computes_score_and_percentage(session, seeded):
     submit_response(session, assessment.id, seeded["student"].id, seeded["q1"].id, answer="4")
     submit_response(session, assessment.id, seeded["student"].id, seeded["q2"].id, answer="False")
 
-    completed = complete_assessment(session, assessment.id)
+    completed = complete_assessment(session, assessment.id, total_possible=2.0)
     assert completed.completed_at is not None
     assert completed.total_score == 1.0
     assert completed.percentage == pytest.approx(50.0)
+
+
+def test_complete_assessment_uses_planned_total_for_partial_results(session, seeded):
+    assessment = start_assessment(session, seeded["student"].id, seeded["subject"].id)
+    submit_response(session, assessment.id, seeded["student"].id, seeded["q1"].id, answer="4")
+
+    completed = complete_assessment(session, assessment.id, total_possible=2.0)
+
+    assert completed.total_score == 1.0
+    assert completed.percentage == pytest.approx(50.0)
+
+
+def test_submit_response_rejects_another_students_assessment(session, seeded):
+    other_student = User(
+        student_code="STU0002", name="Other Student", email="other@example.test",
+        password_hash="hash", role="student",
+    )
+    session.add(other_student)
+    session.flush()
+    assessment = start_assessment(session, other_student.id, seeded["subject"].id)
+
+    with pytest.raises(ValueError, match="does not belong"):
+        submit_response(
+            session, assessment.id, seeded["student"].id, seeded["q1"].id, answer="4"
+        )

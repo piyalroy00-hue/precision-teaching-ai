@@ -61,7 +61,7 @@ associated learning records. Password hashes and plaintext passwords are never s
 pytest -v
 ```
 
-67 tests covering BKT correctness/bounds, mastery-band classification,
+The suite covers BKT correctness/bounds, mastery-band classification,
 database schema/seeding, dataset validation, question loading, auth, and the
 assessment engine (scoring + BKT integration) — all passing.
 
@@ -97,7 +97,7 @@ app/
 
 data/{raw,generated,augmented,processed}/   dataset pipeline outputs
 scripts/                  generation/augmentation/validation/synthetic-data CLIs
-tests/                    pytest suite (50 tests)
+tests/                    pytest suite
 ```
 
 ## Phase 2 adaptive loop

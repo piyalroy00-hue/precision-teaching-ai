@@ -18,10 +18,33 @@ def start_learning_session(session: Session, student_id: int, resource_id: int) 
     return learning_session
 
 
-def complete_learning_session(session: Session, learning_session_id: int) -> LearningSession:
+def get_or_start_learning_session(session: Session, student_id: int, resource_id: int) -> LearningSession:
+    existing = (
+        session.query(LearningSession)
+        .filter_by(student_id=student_id, resource_id=resource_id)
+        .order_by(LearningSession.id.desc())
+        .first()
+    )
+    if existing is not None:
+        return existing
+    return start_learning_session(session, student_id, resource_id)
+
+
+def complete_learning_session(
+    session: Session,
+    learning_session_id: int,
+    student_id: int,
+    expected_resource_id: int | None = None,
+) -> LearningSession:
     learning_session = session.get(LearningSession, learning_session_id)
     if learning_session is None:
         raise ValueError(f"Learning session {learning_session_id} does not exist.")
+    if learning_session.student_id != student_id:
+        raise ValueError("Learning session does not belong to this student.")
+    if expected_resource_id is not None and learning_session.resource_id != expected_resource_id:
+        raise ValueError("Learning session does not match the requested resource.")
+    if learning_session.completed_at is not None:
+        return learning_session
     learning_session.completion_percentage = 100.0
     learning_session.completed_at = datetime.now(timezone.utc)
     recommendation = (

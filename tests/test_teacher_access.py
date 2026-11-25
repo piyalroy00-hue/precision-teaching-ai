@@ -1,8 +1,15 @@
-from app.main import create_app
+import pytest
+
+from app import main as main_module
+
+
+@pytest.fixture(autouse=True)
+def no_bootstrap(monkeypatch):
+    monkeypatch.setattr(main_module, "bootstrap", lambda: None)
 
 
 def test_admin_can_open_teacher_dashboard():
-    app = create_app()
+    app = main_module.create_app()
     app.config.update(TESTING=True)
     client = app.test_client()
     with client.session_transaction() as browser_session:
@@ -14,7 +21,7 @@ def test_admin_can_open_teacher_dashboard():
 
 
 def test_student_cannot_open_teacher_dashboard():
-    app = create_app()
+    app = main_module.create_app()
     app.config.update(TESTING=True)
     client = app.test_client()
     with client.session_transaction() as browser_session:

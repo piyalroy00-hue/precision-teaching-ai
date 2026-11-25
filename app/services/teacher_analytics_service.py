@@ -2,21 +2,32 @@
 from sqlalchemy import func
 from sqlalchemy.orm import Session
 
+from app.database.seed import leaf_topic_ids
 from app.models import KnowledgeState, LearningSession, Response, Topic, User
 
 
 def class_overview(session: Session) -> dict:
     students = session.query(User).filter_by(role="student").count()
-    average_mastery = session.query(func.avg(KnowledgeState.mastery_probability)).scalar() or 0.0
+    leaf_ids = leaf_topic_ids(session)
+    average_mastery = (
+        session.query(func.avg(KnowledgeState.mastery_probability))
+        .filter(KnowledgeState.topic_id.in_(leaf_ids))
+        .scalar()
+        or 0.0
+    )
     intervention_count = (
         session.query(KnowledgeState.student_id)
-        .filter(KnowledgeState.mastery_probability < 0.40)
+        .filter(
+            KnowledgeState.topic_id.in_(leaf_ids),
+            KnowledgeState.mastery_probability < 0.40,
+        )
         .distinct()
         .count()
     )
     topic_rows = (
         session.query(Topic.name, func.avg(KnowledgeState.mastery_probability))
         .join(KnowledgeState)
+        .filter(Topic.id.in_(leaf_ids))
         .group_by(Topic.id)
         .order_by(Topic.name)
         .all()
@@ -30,7 +41,14 @@ def class_overview(session: Session) -> dict:
 
 
 def student_analytics(session: Session, student_id: int) -> dict:
-    states = session.query(KnowledgeState).filter_by(student_id=student_id).join(Topic).all()
+    leaf_ids = leaf_topic_ids(session)
+    states = (
+        session.query(KnowledgeState)
+        .filter_by(student_id=student_id)
+        .filter(KnowledgeState.topic_id.in_(leaf_ids))
+        .join(Topic)
+        .all()
+    )
     sessions = session.query(LearningSession).filter_by(student_id=student_id).all()
     return {
         "topic_mastery": [{"topic": state.topic.name, "mastery": state.mastery_probability} for state in states],
@@ -43,8 +61,14 @@ def all_student_performance(session: Session) -> list[dict]:
     """Return a privacy-safe performance summary for each student account."""
     students = session.query(User).filter_by(role="student").order_by(User.student_code).all()
     performance = []
+    leaf_ids = leaf_topic_ids(session)
     for student in students:
-        states = session.query(KnowledgeState).filter_by(student_id=student.id).all()
+        states = (
+            session.query(KnowledgeState)
+            .filter_by(student_id=student.id)
+            .filter(KnowledgeState.topic_id.in_(leaf_ids))
+            .all()
+        )
         responses = session.query(Response).filter_by(student_id=student.id).all()
         sessions = session.query(LearningSession).filter_by(student_id=student.id).all()
         average_mastery = (

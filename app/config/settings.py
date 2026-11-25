@@ -1,5 +1,6 @@
 """Central configuration for paths, database, and BKT defaults."""
 import os
+import secrets
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parents[2]
@@ -11,7 +12,15 @@ AUGMENTED_DATA_DIR = DATA_DIR / "augmented"
 PROCESSED_DATA_DIR = DATA_DIR / "processed"
 
 DATABASE_PATH = BASE_DIR / "precision_teaching.db"
-DATABASE_URL = f"sqlite:///{DATABASE_PATH.as_posix()}"
+DATABASE_URL = os.getenv("DATABASE_URL", f"sqlite:///{DATABASE_PATH.as_posix()}")
+if DATABASE_URL.startswith("postgres://"):
+    DATABASE_URL = DATABASE_URL.replace("postgres://", "postgresql://", 1)
+
+APP_ENV = os.getenv("APP_ENV", os.getenv("FLASK_ENV", "development")).lower()
+SECRET_KEY = os.getenv("FLASK_SECRET_KEY") or os.getenv("SECRET_KEY") or secrets.token_hex(32)
+FLASK_DEBUG = APP_ENV != "production" and os.getenv("FLASK_DEBUG", "1").lower() in {"1", "true", "yes", "on"}
+FLASK_HOST = os.getenv("FLASK_HOST", "127.0.0.1")
+FLASK_PORT = int(os.getenv("PORT", os.getenv("FLASK_PORT", "5000")))
 
 # Fixed seed so dataset generation/augmentation is reproducible.
 RANDOM_SEED = 42

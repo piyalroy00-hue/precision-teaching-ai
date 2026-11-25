@@ -65,3 +65,44 @@ def test_register_rejects_duplicate_student_code(session):
         register_student(
             session, student_code="CS2026005", name="Dana2", email="dana2@example.test", password="Pass1234!"
         )
+
+
+def test_registration_and_authentication_normalize_email(session):
+    user = register_student(
+        session, student_code="CS2026006", name="Case Test", email="Case@Example.Test", password="Pass1234!"
+    )
+
+    assert user.email == "case@example.test"
+    assert authenticate(session, "CASE@EXAMPLE.TEST", "Pass1234!").id == user.id
+
+
+def test_setup_admin_route_is_not_exposed(monkeypatch):
+    from app import main as main_module
+
+    monkeypatch.setattr(main_module, "bootstrap", lambda: None)
+    app = main_module.create_app()
+    app.config.update(TESTING=True)
+    client = app.test_client()
+
+    assert client.get("/setup-admin").status_code == 404
+    assert client.post("/setup-admin", data={"email": "x@example.test"}).status_code == 404
+
+
+def test_logged_in_role_selects_landing_page(monkeypatch):
+    from app import main as main_module
+
+    monkeypatch.setattr(main_module, "bootstrap", lambda: None)
+    app = main_module.create_app()
+    app.config.update(TESTING=True)
+    client = app.test_client()
+
+    for role, expected_location in (
+        ("admin", "/admin/"),
+        ("teacher", "/teacher/"),
+        ("student", "/dashboard"),
+    ):
+        with client.session_transaction() as browser_session:
+            browser_session.clear()
+            browser_session.update(user_id=1, user_role=role)
+        response = client.get("/")
+        assert response.headers["Location"] == expected_location

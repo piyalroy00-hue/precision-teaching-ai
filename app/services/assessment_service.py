@@ -38,9 +38,18 @@ def submit_response(
     answer: str,
     time_taken: float = 0.0,
 ) -> Response:
+    assessment = session.get(Assessment, assessment_id)
+    if assessment is None:
+        raise ValueError(f"Assessment {assessment_id} does not exist.")
+    if assessment.student_id != student_id:
+        raise ValueError("Assessment does not belong to this student.")
+
     question = session.get(Question, question_id)
     if question is None:
         raise ValueError(f"Question {question_id} does not exist.")
+    topic = session.get(Topic, question.topic_id)
+    if topic is None or topic.subject_id != assessment.subject_id:
+        raise ValueError("Question does not belong to the assessment subject.")
 
     is_correct = answer.strip() == question.correct_answer.strip()
     score = question.marks if is_correct else 0.0
@@ -66,14 +75,17 @@ def submit_response(
     return response
 
 
-def complete_assessment(session: Session, assessment_id: int) -> Assessment:
+def complete_assessment(
+    session: Session, assessment_id: int, total_possible: float | None = None
+) -> Assessment:
     assessment = session.get(Assessment, assessment_id)
     if assessment is None:
         raise ValueError(f"Assessment {assessment_id} does not exist.")
 
     responses = assessment.responses
     total_score = sum(r.score for r in responses)
-    total_possible = sum(r.question.marks for r in responses)
+    if total_possible is None:
+        total_possible = sum(r.question.marks for r in responses)
 
     assessment.total_score = total_score
     assessment.percentage = (total_score / total_possible * 100) if total_possible > 0 else 0.0

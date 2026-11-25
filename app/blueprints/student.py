@@ -16,9 +16,9 @@ from app.services.assessment_service import (
     submit_response,
 )
 from app.services.knowledge_service import classify_concepts, get_topic_mastery_report
-from app.services.learning_service import complete_learning_session, start_learning_session
+from app.services.learning_service import complete_learning_session, get_or_start_learning_session
 from app.services.recommendation_service import build_learning_path
-from app.services.generated_practice_service import generate_practice_question, save_generated_practice
+from app.services.generated_practice_service import generate_practice_question, get_or_create_generated_practice
 from app.services.personalized_tutor_service import PersonalizedTutorService
 from app.services.tutor_conversation_service import respond_to_student, start_ai_session
 
@@ -63,6 +63,8 @@ def assessment():
         action = request.form.get("action")
 
         if action == "start":
+            if session.get("assessment_id"):
+                return redirect("/assessment")
             with get_session() as db_session:
                 subject = db_session.query(Subject).filter_by(name="Python Programming").one()
                 questions = get_fixed_diagnostic_questions(db_session, subject.id)
@@ -77,6 +79,8 @@ def assessment():
             question_ids = session.get("question_ids", [])
             question_index = int(session.get("question_index", 0))
             if assessment_id is None or not question_ids:
+                return redirect("/assessment")
+            if question_index >= len(question_ids):
                 return redirect("/assessment")
 
             question_id = question_ids[question_index]
@@ -105,8 +109,9 @@ def assessment():
 
     if question_index >= len(question_ids):
         with get_session() as db_session:
-            assessment = complete_assessment(db_session, assessment_id)
-            total_possible = sum(r.question.marks for r in assessment.responses)
+            planned_questions = [db_session.get(Question, question_id) for question_id in question_ids]
+            total_possible = sum(question.marks for question in planned_questions if question is not None)
+            assessment = complete_assessment(db_session, assessment_id, total_possible=total_possible)
             total_score = assessment.total_score
             percentage = assessment.percentage
         session.pop("assessment_id", None)
@@ -193,7 +198,12 @@ def _tutor_context(db_session, student_id: int, topic: Topic) -> TutorContext:
     difficulty = "Easy" if mastery < 0.40 else "Medium" if mastery < 0.80 else "Hard"
     errors = [
         response.question.question_text
-        for response in db_session.query(Response).filter_by(student_id=student_id).all()
+        for response in (
+            db_session.query(Response)
+            .filter_by(student_id=student_id)
+            .order_by(Response.submitted_at.asc())
+            .all()
+        )
         if not response.is_correct and response.question.topic_id == topic.id
     ][-2:]
     return TutorContext(
@@ -226,7 +236,7 @@ def tutor():
             return redirect(f"/tutor?topic_id={topic.id}")
         instruction = PersonalizedTutorService().generate(context)
         practice = generate_practice_question(context)
-        save_generated_practice(db_session, session["user_id"], topic.id, practice)
+        get_or_create_generated_practice(db_session, session["user_id"], topic.id, practice)
         messages = db_session.query(AIMessage).filter_by(session_id=ai_session_id).order_by(AIMessage.timestamp).all()
         message_data = [{"role": message.role, "message": message.message} for message in messages]
         tutor_data = {"topic": topic.name, "instruction": instruction, "practice": practice}
@@ -240,7 +250,12 @@ def learning(resource_id: int):
     if request.method == "POST":
         learning_session_id = int(request.form["learning_session_id"])
         with get_session() as db_session:
-            learning_session = complete_learning_session(db_session, learning_session_id)
+            learning_session = complete_learning_session(
+                db_session,
+                learning_session_id,
+                session["user_id"],
+                expected_resource_id=resource_id,
+            )
             session["adaptive_topic_id"] = learning_session.topic_id
         return redirect("/adaptive-practice")
 
@@ -248,7 +263,7 @@ def learning(resource_id: int):
         resource = db_session.get(LearningResource, resource_id)
         if resource is None:
             return redirect("/learning-plan")
-        learning_session = start_learning_session(db_session, session["user_id"], resource.id)
+        learning_session = get_or_start_learning_session(db_session, session["user_id"], resource.id)
         resource_data = {
             "title": resource.title,
             "content": resource.content,
@@ -268,6 +283,8 @@ def adaptive_practice():
         return redirect("/learning-plan")
 
     if request.method == "POST":
+        if "adaptive_assessment_id" not in session:
+            return redirect("/adaptive-practice")
         question_id = int(request.form["question_id"])
         answer = request.form.get("answer", "").strip()
         if not answer:
@@ -279,6 +296,7 @@ def adaptive_practice():
                 session["user_id"],
                 question_id,
                 answer,
+                expected_topic_id=topic_id,
             )
         session["adaptive_feedback"] = {
             "correct": response.is_correct,

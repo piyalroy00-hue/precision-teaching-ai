@@ -10,7 +10,13 @@ from app.blueprints.auth import bp as auth_bp
 from app.blueprints.admin import bp as admin_bp
 from app.blueprints.student import bp as student_bp
 from app.blueprints.teacher import bp as teacher_bp
-from app.config.settings import PROCESSED_DATA_DIR
+from app.config.settings import (
+    FLASK_DEBUG,
+    FLASK_HOST,
+    FLASK_PORT,
+    PROCESSED_DATA_DIR,
+    SECRET_KEY,
+)
 from app.database.db import get_session, init_db
 from app.database.resource_seed import seed_learning_resources
 from app.database.seed import seed_subject_and_topics
@@ -21,7 +27,8 @@ _bootstrapped = False
 
 def create_app() -> Flask:
     app = Flask(__name__)
-    app.secret_key = "precision-teaching-dev-key"
+    app.secret_key = SECRET_KEY
+    app.config["DEBUG"] = FLASK_DEBUG
 
     @app.before_request
     def before_request() -> None:
@@ -53,4 +60,4 @@ app = create_app()
 
 
 if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0", port=5000)
+    app.run(debug=FLASK_DEBUG, host=FLASK_HOST, port=FLASK_PORT)

@@ -1,151 +1,151 @@
 student_code,topic,completion_percentage,data_source
-SYN001,Variables and Data Types,100,synthetic
-SYN001,Operators,100,synthetic
-SYN001,Conditional Statements,100,synthetic
-SYN001,for Loop,100,synthetic
-SYN001,while Loop,100,synthetic
-SYN001,Function Definition,100,synthetic
-SYN001,Parameters and Arguments,100,synthetic
-SYN001,Return Values,100,synthetic
-SYN001,Variable Scope,100,synthetic
-SYN001,Lists,100,synthetic
-SYN001,Tuples,100,synthetic
-SYN001,Dictionaries,100,synthetic
-SYN001,Exception Handling,100,synthetic
-SYN001,File Handling,100,synthetic
-SYN001,Recursion,100,synthetic
-SYN002,Variables and Data Types,100,synthetic
-SYN002,Operators,100,synthetic
-SYN002,Conditional Statements,100,synthetic
-SYN002,for Loop,100,synthetic
-SYN002,while Loop,100,synthetic
-SYN002,Function Definition,100,synthetic
-SYN002,Parameters and Arguments,100,synthetic
-SYN002,Return Values,100,synthetic
-SYN002,Variable Scope,100,synthetic
-SYN002,Lists,100,synthetic
-SYN002,Tuples,100,synthetic
-SYN002,Dictionaries,100,synthetic
-SYN002,Exception Handling,100,synthetic
-SYN002,File Handling,100,synthetic
-SYN002,Recursion,100,synthetic
-SYN003,Variables and Data Types,100,synthetic
-SYN003,Operators,100,synthetic
-SYN003,Conditional Statements,100,synthetic
-SYN003,for Loop,100,synthetic
-SYN003,while Loop,100,synthetic
-SYN003,Function Definition,100,synthetic
-SYN003,Parameters and Arguments,100,synthetic
-SYN003,Return Values,100,synthetic
-SYN003,Variable Scope,100,synthetic
-SYN003,Lists,100,synthetic
-SYN003,Tuples,100,synthetic
-SYN003,Dictionaries,100,synthetic
-SYN003,Exception Handling,100,synthetic
-SYN003,File Handling,100,synthetic
-SYN003,Recursion,100,synthetic
-SYN004,Variables and Data Types,100,synthetic
-SYN004,Operators,100,synthetic
-SYN004,Conditional Statements,100,synthetic
-SYN004,for Loop,100,synthetic
-SYN004,while Loop,100,synthetic
-SYN004,Function Definition,100,synthetic
-SYN004,Parameters and Arguments,100,synthetic
-SYN004,Return Values,100,synthetic
-SYN004,Variable Scope,100,synthetic
-SYN004,Lists,100,synthetic
-SYN004,Tuples,100,synthetic
-SYN004,Dictionaries,100,synthetic
-SYN004,Exception Handling,100,synthetic
-SYN004,File Handling,100,synthetic
-SYN004,Recursion,100,synthetic
-SYN005,Variables and Data Types,100,synthetic
-SYN005,Operators,100,synthetic
-SYN005,Conditional Statements,100,synthetic
-SYN005,for Loop,100,synthetic
-SYN005,while Loop,100,synthetic
-SYN005,Function Definition,100,synthetic
-SYN005,Parameters and Arguments,100,synthetic
-SYN005,Return Values,100,synthetic
-SYN005,Variable Scope,100,synthetic
-SYN005,Lists,100,synthetic
-SYN005,Tuples,100,synthetic
-SYN005,Dictionaries,100,synthetic
-SYN005,Exception Handling,100,synthetic
-SYN005,File Handling,100,synthetic
-SYN005,Recursion,100,synthetic
-SYN006,Variables and Data Types,100,synthetic
-SYN006,Operators,100,synthetic
-SYN006,Conditional Statements,100,synthetic
-SYN006,for Loop,100,synthetic
-SYN006,while Loop,100,synthetic
-SYN006,Function Definition,100,synthetic
-SYN006,Parameters and Arguments,100,synthetic
-SYN006,Return Values,100,synthetic
-SYN006,Variable Scope,100,synthetic
-SYN006,Lists,100,synthetic
-SYN006,Tuples,100,synthetic
-SYN006,Dictionaries,100,synthetic
-SYN006,Exception Handling,100,synthetic
-SYN006,File Handling,100,synthetic
-SYN006,Recursion,100,synthetic
-SYN007,Variables and Data Types,100,synthetic
-SYN007,Operators,100,synthetic
-SYN007,Conditional Statements,100,synthetic
-SYN007,for Loop,100,synthetic
-SYN007,while Loop,100,synthetic
-SYN007,Function Definition,100,synthetic
-SYN007,Parameters and Arguments,100,synthetic
-SYN007,Return Values,100,synthetic
-SYN007,Variable Scope,100,synthetic
-SYN007,Lists,100,synthetic
-SYN007,Tuples,100,synthetic
-SYN007,Dictionaries,100,synthetic
-SYN007,Exception Handling,100,synthetic
-SYN007,File Handling,100,synthetic
-SYN007,Recursion,100,synthetic
-SYN008,Variables and Data Types,100,synthetic
-SYN008,Operators,100,synthetic
-SYN008,Conditional Statements,100,synthetic
-SYN008,for Loop,100,synthetic
-SYN008,while Loop,100,synthetic
-SYN008,Function Definition,100,synthetic
-SYN008,Parameters and Arguments,100,synthetic
-SYN008,Return Values,100,synthetic
-SYN008,Variable Scope,100,synthetic
-SYN008,Lists,100,synthetic
-SYN008,Tuples,100,synthetic
-SYN008,Dictionaries,100,synthetic
-SYN008,Exception Handling,100,synthetic
-SYN008,File Handling,100,synthetic
-SYN008,Recursion,100,synthetic
-SYN009,Variables and Data Types,100,synthetic
-SYN009,Operators,100,synthetic
-SYN009,Conditional Statements,100,synthetic
-SYN009,for Loop,100,synthetic
-SYN009,while Loop,100,synthetic
-SYN009,Function Definition,100,synthetic
-SYN009,Parameters and Arguments,100,synthetic
-SYN009,Return Values,100,synthetic
-SYN009,Variable Scope,100,synthetic
-SYN009,Lists,100,synthetic
-SYN009,Tuples,100,synthetic
-SYN009,Dictionaries,100,synthetic
-SYN009,Exception Handling,100,synthetic
-SYN009,File Handling,100,synthetic
-SYN009,Recursion,100,synthetic
-SYN010,Variables and Data Types,100,synthetic
-SYN010,Operators,100,synthetic
-SYN010,Conditional Statements,100,synthetic
-SYN010,for Loop,100,synthetic
-SYN010,while Loop,100,synthetic
-SYN010,Function Definition,100,synthetic
-SYN010,Parameters and Arguments,100,synthetic
-SYN010,Return Values,100,synthetic
-SYN010,Variable Scope,100,synthetic
-SYN010,Lists,100,synthetic
-SYN010,Tuples,100,synthetic
-SYN010,Dictionaries,100,synthetic
-SYN010,Exception Handling,100,synthetic
-SYN010,File Handling,100,synthetic
-SYN010,Recursion,100,synthetic
+SYN0001,Variables and Data Types,100,synthetic
+SYN0001,Operators,100,synthetic
+SYN0001,Conditional Statements,100,synthetic
+SYN0001,for Loop,100,synthetic
+SYN0001,while Loop,100,synthetic
+SYN0001,Function Definition,100,synthetic
+SYN0001,Parameters and Arguments,100,synthetic
+SYN0001,Return Values,100,synthetic
+SYN0001,Variable Scope,100,synthetic
+SYN0001,Lists,100,synthetic
+SYN0001,Tuples,100,synthetic
+SYN0001,Dictionaries,100,synthetic
+SYN0001,Exception Handling,100,synthetic
+SYN0001,File Handling,100,synthetic
+SYN0001,Recursion,100,synthetic
+SYN0002,Variables and Data Types,100,synthetic
+SYN0002,Operators,100,synthetic
+SYN0002,Conditional Statements,100,synthetic
+SYN0002,for Loop,100,synthetic
+SYN0002,while Loop,100,synthetic
+SYN0002,Function Definition,100,synthetic
+SYN0002,Parameters and Arguments,100,synthetic
+SYN0002,Return Values,100,synthetic
+SYN0002,Variable Scope,100,synthetic
+SYN0002,Lists,100,synthetic
+SYN0002,Tuples,100,synthetic
+SYN0002,Dictionaries,100,synthetic
+SYN0002,Exception Handling,100,synthetic
+SYN0002,File Handling,100,synthetic
+SYN0002,Recursion,100,synthetic
+SYN0003,Variables and Data Types,100,synthetic
+SYN0003,Operators,100,synthetic
+SYN0003,Conditional Statements,100,synthetic
+SYN0003,for Loop,100,synthetic
+SYN0003,while Loop,100,synthetic
+SYN0003,Function Definition,100,synthetic
+SYN0003,Parameters and Arguments,100,synthetic
+SYN0003,Return Values,100,synthetic
+SYN0003,Variable Scope,100,synthetic
+SYN0003,Lists,100,synthetic
+SYN0003,Tuples,100,synthetic
+SYN0003,Dictionaries,100,synthetic
+SYN0003,Exception Handling,100,synthetic
+SYN0003,File Handling,100,synthetic
+SYN0003,Recursion,100,synthetic
+SYN0004,Variables and Data Types,100,synthetic
+SYN0004,Operators,100,synthetic
+SYN0004,Conditional Statements,100,synthetic
+SYN0004,for Loop,100,synthetic
+SYN0004,while Loop,100,synthetic
+SYN0004,Function Definition,100,synthetic
+SYN0004,Parameters and Arguments,100,synthetic
+SYN0004,Return Values,100,synthetic
+SYN0004,Variable Scope,100,synthetic
+SYN0004,Lists,100,synthetic
+SYN0004,Tuples,100,synthetic
+SYN0004,Dictionaries,100,synthetic
+SYN0004,Exception Handling,100,synthetic
+SYN0004,File Handling,100,synthetic
+SYN0004,Recursion,100,synthetic
+SYN0005,Variables and Data Types,100,synthetic
+SYN0005,Operators,100,synthetic
+SYN0005,Conditional Statements,100,synthetic
+SYN0005,for Loop,100,synthetic
+SYN0005,while Loop,100,synthetic
+SYN0005,Function Definition,100,synthetic
+SYN0005,Parameters and Arguments,100,synthetic
+SYN0005,Return Values,100,synthetic
+SYN0005,Variable Scope,100,synthetic
+SYN0005,Lists,100,synthetic
+SYN0005,Tuples,100,synthetic
+SYN0005,Dictionaries,100,synthetic
+SYN0005,Exception Handling,100,synthetic
+SYN0005,File Handling,100,synthetic
+SYN0005,Recursion,100,synthetic
+SYN0006,Variables and Data Types,100,synthetic
+SYN0006,Operators,100,synthetic
+SYN0006,Conditional Statements,100,synthetic
+SYN0006,for Loop,100,synthetic
+SYN0006,while Loop,100,synthetic
+SYN0006,Function Definition,100,synthetic
+SYN0006,Parameters and Arguments,100,synthetic
+SYN0006,Return Values,100,synthetic
+SYN0006,Variable Scope,100,synthetic
+SYN0006,Lists,100,synthetic
+SYN0006,Tuples,100,synthetic
+SYN0006,Dictionaries,100,synthetic
+SYN0006,Exception Handling,100,synthetic
+SYN0006,File Handling,100,synthetic
+SYN0006,Recursion,100,synthetic
+SYN0007,Variables and Data Types,100,synthetic
+SYN0007,Operators,100,synthetic
+SYN0007,Conditional Statements,100,synthetic
+SYN0007,for Loop,100,synthetic
+SYN0007,while Loop,100,synthetic
+SYN0007,Function Definition,100,synthetic
+SYN0007,Parameters and Arguments,100,synthetic
+SYN0007,Return Values,100,synthetic
+SYN0007,Variable Scope,100,synthetic
+SYN0007,Lists,100,synthetic
+SYN0007,Tuples,100,synthetic
+SYN0007,Dictionaries,100,synthetic
+SYN0007,Exception Handling,100,synthetic
+SYN0007,File Handling,100,synthetic
+SYN0007,Recursion,100,synthetic
+SYN0008,Variables and Data Types,100,synthetic
+SYN0008,Operators,100,synthetic
+SYN0008,Conditional Statements,100,synthetic
+SYN0008,for Loop,100,synthetic
+SYN0008,while Loop,100,synthetic
+SYN0008,Function Definition,100,synthetic
+SYN0008,Parameters and Arguments,100,synthetic
+SYN0008,Return Values,100,synthetic
+SYN0008,Variable Scope,100,synthetic
+SYN0008,Lists,100,synthetic
+SYN0008,Tuples,100,synthetic
+SYN0008,Dictionaries,100,synthetic
+SYN0008,Exception Handling,100,synthetic
+SYN0008,File Handling,100,synthetic
+SYN0008,Recursion,100,synthetic
+SYN0009,Variables and Data Types,100,synthetic
+SYN0009,Operators,100,synthetic
+SYN0009,Conditional Statements,100,synthetic
+SYN0009,for Loop,100,synthetic
+SYN0009,while Loop,100,synthetic
+SYN0009,Function Definition,100,synthetic
+SYN0009,Parameters and Arguments,100,synthetic
+SYN0009,Return Values,100,synthetic
+SYN0009,Variable Scope,100,synthetic
+SYN0009,Lists,100,synthetic
+SYN0009,Tuples,100,synthetic
+SYN0009,Dictionaries,100,synthetic
+SYN0009,Exception Handling,100,synthetic
+SYN0009,File Handling,100,synthetic
+SYN0009,Recursion,100,synthetic
+SYN0010,Variables and Data Types,100,synthetic
+SYN0010,Operators,100,synthetic
+SYN0010,Conditional Statements,100,synthetic
+SYN0010,for Loop,100,synthetic
+SYN0010,while Loop,100,synthetic
+SYN0010,Function Definition,100,synthetic
+SYN0010,Parameters and Arguments,100,synthetic
+SYN0010,Return Values,100,synthetic
+SYN0010,Variable Scope,100,synthetic
+SYN0010,Lists,100,synthetic
+SYN0010,Tuples,100,synthetic
+SYN0010,Dictionaries,100,synthetic
+SYN0010,Exception Handling,100,synthetic
+SYN0010,File Handling,100,synthetic
+SYN0010,Recursion,100,synthetic

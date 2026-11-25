@@ -93,3 +93,20 @@ LEAF_TOPIC_NAMES = [
     "File Handling",
     "Recursion",
 ]
+
+
+def leaf_topic_ids(session: Session) -> list[int]:
+    """Return IDs for topics that have no child topics."""
+    parent_ids = {
+        parent_id
+        for (parent_id,) in (
+            session.query(Topic.parent_topic_id)
+            .filter(Topic.parent_topic_id.isnot(None))
+            .all()
+        )
+    }
+    return [
+        topic.id
+        for topic in session.query(Topic).order_by(Topic.id)
+        if topic.id not in parent_ids
+    ]

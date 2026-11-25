@@ -12,7 +12,7 @@ class PracticeFeedback:
 
 def generate_hint(context: TutorContext) -> str:
     """Offer one bounded next step without revealing the answer."""
-    error_focus = context.previous_errors[0] if context.previous_errors else None
+    error_focus = context.previous_errors[-1] if context.previous_errors else None
     if error_focus:
         return f"Before answering, revisit this earlier difficulty: {error_focus}."
     prerequisite = context.prerequisite_concepts[0] if context.prerequisite_concepts else None

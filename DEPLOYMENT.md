@@ -50,7 +50,8 @@ Fill in the configuration form:
 | **Environment** | `Python 3` |
 | **Region** | `Oregon` (or closest to your users) |
 | **Branch** | `main` |
-| **Build Command** | `pip install -r requirements.txt && python scripts/init_db.py` |
+| **Build Command** | `pip install -r requirements.txt` |
+| **Pre-Deploy Command** | `python scripts/init_db.py` |
 | **Start Command** | `gunicorn app.main:app` |
 | **Plan** | `Standard` (free tier available for testing) |
 
@@ -59,7 +60,9 @@ Fill in the configuration form:
 In the Render dashboard, add these environment variables:
 
 ```
-FLASK_ENV=production
+APP_ENV=production
+FLASK_SECRET_KEY=<long-random-secret>
+DATABASE_URL=<Render Postgres connection string>
 AI_TUTOR_PROVIDER=local
 ```
 
@@ -74,7 +77,7 @@ OPENAI_TUTOR_MODEL=gpt-4o-mini
 
 Click **Deploy**. Render will:
 1. ✅ Install dependencies from `requirements.txt`
-2. ✅ Run `python scripts/init_db.py` to create the database schema
+2. ✅ Run `python scripts/init_db.py` before deploy to create the database schema
 3. ✅ Start the Flask app with Gunicorn
 4. ✅ Assign a public URL (e.g., `https://precision-teaching-ai.onrender.com`)
 
@@ -111,13 +114,12 @@ After successful deployment:
 - View your learning dashboard
 
 ### Create Admin Account
-Currently, the `promote_admin.py` script must be run manually. For now:
+There is no public admin-setup route. To promote an account:
 
-1. **Register a student account** via the web interface
-2. **Request admin promotion** (you'll need to run this locally or add an endpoint)
-
-Alternatively, enable a one-time admin signup:
-- Contact the development team to modify `app/blueprints/admin.py` with a setup route
+1. Register a student account via the deployed web interface
+2. Open the web service **Shell** in the Render dashboard
+3. Run `python scripts/promote_admin.py` and enter that account's email
+4. Sign out and sign back in
 - Or use direct database access (see "Debugging" section)
 
 ### Monitor Logs
@@ -169,7 +171,11 @@ By default, Precision Teaching AI uses SQLite (`precision_teaching.db`).
 
 | Variable | Default | Description |
 |----------|---------|-------------|
-| `FLASK_ENV` | `production` | Flask environment mode |
+| `FLASK_ENV` | `production` | Legacy environment mode (use `APP_ENV`) |
+| `APP_ENV` | `development` | Set to `production` to disable Flask debug mode |
+| `FLASK_SECRET_KEY` | random per process | Session signing key; must be set in production |
+| `FLASK_DEBUG` | `1` when not production | Enable/disable the development debugger |
+| `FLASK_HOST` | `127.0.0.1` | Host used by `python app/main.py` |
 | `AI_TUTOR_PROVIDER` | `local` | AI provider: `local` or `openai` |
 | `OPENAI_API_KEY` | — | OpenAI API key (required if `AI_TUTOR_PROVIDER=openai`) |
 | `OPENAI_TUTOR_MODEL` | `gpt-4o-mini` | OpenAI model to use for tutor |
@@ -198,15 +204,12 @@ By default, Precision Teaching AI uses SQLite (`precision_teaching.db`).
 
 ### Secret Keys Not Working
 
-**Error**: "Unsafe mode" or "Secret key mismatch"
+**Error**: "Unsafe mode", "Secret key mismatch", or users are logged out after restart
 
 **Solution**:
-1. The hardcoded secret key `"precision-teaching-dev-key"` in `app/main.py` is for development only
-2. For production, update `app/main.py`:
-   ```python
-   app.secret_key = os.getenv("SECRET_KEY", "precision-teaching-dev-key")
-   ```
-3. Add `SECRET_KEY` environment variable to Render dashboard (use a strong random string)
+1. Set `FLASK_SECRET_KEY` to a strong random value in the environment; `render.yaml` generates one automatically
+2. Set `APP_ENV=production` (or legacy `FLASK_ENV=production`) so Flask debug mode stays disabled
+3. Keep the same `FLASK_SECRET_KEY` across all workers/restarts so sessions remain valid
 
 ### Service Won't Stay Running
 

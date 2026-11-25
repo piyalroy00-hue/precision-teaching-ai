@@ -29,6 +29,10 @@ def generate_practice_question(context: TutorContext) -> GeneratedPracticeQuesti
     return question
 
 
+def _serialize(question: GeneratedPracticeQuestion) -> str:
+    return json.dumps(question.__dict__, sort_keys=True)
+
+
 def save_generated_practice(
     session: Session, student_id: int, topic_id: int, question: GeneratedPracticeQuestion
 ) -> GeneratedContent:
@@ -41,9 +45,31 @@ def save_generated_practice(
         topic_id=topic_id,
         content_type="practice_question",
         prompt_version=PROMPT_VERSION,
-        generated_content=json.dumps(question.__dict__),
+        generated_content=_serialize(question),
         validation_status="validated",
     )
     session.add(record)
     session.flush()
     return record
+
+
+def get_or_create_generated_practice(
+    session: Session, student_id: int, topic_id: int, question: GeneratedPracticeQuestion
+) -> GeneratedContent:
+    """Reuse an identical audit record instead of inserting on every page view."""
+    payload = _serialize(question)
+    existing = (
+        session.query(GeneratedContent)
+        .filter_by(
+            student_id=student_id,
+            topic_id=topic_id,
+            content_type="practice_question",
+            prompt_version=PROMPT_VERSION,
+            generated_content=payload,
+        )
+        .order_by(GeneratedContent.id)
+        .first()
+    )
+    if existing is not None:
+        return existing
+    return save_generated_practice(session, student_id, topic_id, question)

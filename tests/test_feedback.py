@@ -12,9 +12,10 @@ def _context(previous_errors=()) -> TutorContext:
 
 
 def test_hint_uses_the_most_recent_recorded_error_when_available():
-    hint = generate_hint(_context(("Missing a base case",)))
+    hint = generate_hint(_context(("Missing a base case", "Off-by-one in stop condition")))
 
-    assert "Missing a base case" in hint
+    assert "Off-by-one in stop condition" in hint
+    assert "Missing a base case" not in hint
 
 
 def test_hint_uses_prerequisite_when_no_error_is_available():

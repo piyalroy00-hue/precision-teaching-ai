@@ -1,4 +1,4 @@
-"""Create the SQLite schema and seed the fixed subject/topic hierarchy."""
+"""Create the configured database schema and seed the subject/topic hierarchy."""
 import sys
 from pathlib import Path
 

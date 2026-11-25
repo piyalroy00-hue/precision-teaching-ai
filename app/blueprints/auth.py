@@ -6,6 +6,14 @@ from app.services.auth_service import AuthError, authenticate, register_student
 bp = Blueprint("auth", __name__)
 
 
+def _landing_page_for_role(role: str) -> str:
+    if role == "admin":
+        return "/admin/"
+    if role == "teacher":
+        return "/teacher/"
+    return "/dashboard"
+
+
 @bp.route("/", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
@@ -19,14 +27,12 @@ def login():
             session["user_student_code"] = user.student_code
             session["user_email"] = user.email
             session["user_role"] = user.role
-            if user.role == "admin":
-                return redirect("/admin/")
-            return redirect("/dashboard")
+            return redirect(_landing_page_for_role(user.role))
         except AuthError as exc:
             return render_template("auth/login.html", error=str(exc))
 
     if "user_id" in session:
-        return redirect("/dashboard")
+        return redirect(_landing_page_for_role(session.get("user_role", "student")))
     return render_template("auth/login.html")
 
 
@@ -65,25 +71,3 @@ def register():
 def logout():
     session.clear()
     return redirect("/")
-
-
-@bp.route("/setup-admin", methods=["GET", "POST"])
-def setup_admin():
-    """One-time admin setup endpoint (use only once, then delete this route)."""
-    if request.method == "POST":
-        email = request.form.get("email", "").strip()
-        if not email:
-            return render_template("auth/setup_admin.html", error="Email is required.")
-        
-        try:
-            with get_session() as db_session:
-                user = db_session.query(__import__('app.models', fromlist=['User']).User).filter_by(email=email).one_or_none()
-                if user is None:
-                    return render_template("auth/setup_admin.html", error=f"No user found with email: {email}")
-                user.role = "admin"
-                db_session.commit()
-            return render_template("auth/setup_admin.html", success=f"✓ Promoted {email} to admin!")
-        except Exception as exc:
-            return render_template("auth/setup_admin.html", error=str(exc))
-    
-    return render_template("auth/setup_admin.html")

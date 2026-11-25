@@ -21,14 +21,17 @@ git push origin main
 |-------|-------|
 | **Name** | `precision-teaching-ai` |
 | **Environment** | `Python 3` |
-| **Build Command** | `pip install -r requirements.txt && python scripts/init_db.py` |
+| **Build Command** | `pip install -r requirements.txt` |
+| **Pre-Deploy Command** | `python scripts/init_db.py` |
 | **Start Command** | `gunicorn app.main:app` |
 
 ### 4. **Set Environment Variables** (1 min)
 Click **Advanced** → **Environment Variables**, add:
 ```
-FLASK_ENV=production
+APP_ENV=production
+FLASK_SECRET_KEY=<long-random-secret>
 AI_TUTOR_PROVIDER=local
+DATABASE_URL=<Render Postgres connection string>
 ```
 
 ### 5. **Deploy**
@@ -86,15 +89,9 @@ services:
 
 ### Secret Key (Security)
 
-For production, add to Render dashboard:
-```
-SECRET_KEY=your-long-random-secret-string-here
-```
-
-Then update `app/main.py`:
-```python
-app.secret_key = os.getenv("SECRET_KEY", "dev-key")
-```
+For production, add `FLASK_SECRET_KEY` to Render dashboard with a long random value.
+Do not change it after the first deploy unless you want all sessions invalidated.
+`render.yaml` generates one automatically when using a Blueprint.
 
 ---
 

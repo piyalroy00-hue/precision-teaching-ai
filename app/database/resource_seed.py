@@ -1,6 +1,7 @@
 """Deterministic synthetic learning resources used by the Phase 2 demo."""
 from sqlalchemy.orm import Session
 
+from app.database.seed import leaf_topic_ids
 from app.models import LearningResource, Topic
 
 RESOURCE_TYPES = ("explanation", "example", "worked_example", "practice", "summary", "exercise")
@@ -11,7 +12,12 @@ def seed_learning_resources(session: Session) -> None:
     if session.query(LearningResource.id).first() is not None:
         return
 
-    topics = session.query(Topic).order_by(Topic.id).all()
+    topics = (
+        session.query(Topic)
+        .filter(Topic.id.in_(leaf_topic_ids(session)))
+        .order_by(Topic.id)
+        .all()
+    )
     for topic in topics:
         for index, resource_type in enumerate(RESOURCE_TYPES):
             difficulty = ("Easy", "Medium", "Hard")[index % 3]
