@@ -1,15 +1,25 @@
 <nav class="navbar">
     <div class="navbar-container">
         <div class="navbar-brand">
-            <a href="{% if session.get('user_id') %}/dashboard{% else %}/{% endif %}">Precision Teaching AI</a>
+            <a href="{% if session.get('user_id') %}{% if session.get('user_role') == 'admin' %}/admin/{% else %}/dashboard{% endif %}{% else %}/{% endif %}">Precision Teaching AI</a>
         </div>
         <div class="navbar-menu">
             {% if session.get('user_id') %}
-                <a href="/dashboard" class="navbar-link">Dashboard</a>
-                <a href="/assessment" class="navbar-link">Assessment</a>
-                <a href="/learning-plan" class="navbar-link">Learning Plan</a>
-                <a href="/progress" class="navbar-link">Progress</a>
-                <a href="/tutor" class="navbar-link">AI Tutor</a>
+                {% if session.get('user_role') == 'admin' %}
+                    <!-- Admin Navigation -->
+                    <a href="/admin/" class="navbar-link">Admin Panel</a>
+                    <a href="/teacher/" class="navbar-link">Teacher View</a>
+                {% elif session.get('user_role') == 'teacher' %}
+                    <!-- Teacher Navigation -->
+                    <a href="/teacher/" class="navbar-link">Teacher Dashboard</a>
+                {% else %}
+                    <!-- Student Navigation -->
+                    <a href="/dashboard" class="navbar-link">Dashboard</a>
+                    <a href="/assessment" class="navbar-link">Assessment</a>
+                    <a href="/learning-plan" class="navbar-link">Learning Plan</a>
+                    <a href="/progress" class="navbar-link">Progress</a>
+                    <a href="/tutor" class="navbar-link">AI Tutor</a>
+                {% endif %}
                 <a href="/logout" class="navbar-link navbar-logout">Log out</a>
             {% endif %}
         </div>
